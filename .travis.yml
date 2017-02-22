@@ -1,0 +1,3 @@
+language: objective-c
+xcode_workspace: Example/SwiftySoundExample.xcworkspace
+xcode_scheme: SwiftySoundExample
