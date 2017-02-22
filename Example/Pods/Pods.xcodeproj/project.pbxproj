@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07CA2148E0383EC3D629E990C68E9519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+		0836E867A89B12C458317C35396ECFC8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC3C7B33AB8DB143F0C1288779E625 /* Sound.swift */; };
+		98E87B9B59C557B4D0CE2EC9D538ED26 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B6CCA9CA773600F257A00B5F878288 /* SwiftySound-dummy.m */; };
+		CC0C74224245EA18A5672775C443EE2D /* Pods-SwiftySoundExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4FC114099CAA3776587600EAF2666C /* Pods-SwiftySoundExample-dummy.m */; };
+		CCDC402CFD70C213C11361CB17766EA8 /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C051F14AA01CD0C9DF14C92A1E136EFC /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2A89870DABF33F3629A7E47F8509B0 /* Pods-SwiftySoundExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 222E2798184E4CBE654D589DEAC73260 /* Pods-SwiftySoundExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEB7306A55E3CFA2409D4FB3E8FB236A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */; };
+		EBD3E297A62C3A62AE83C7442C893A4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0759DC1B13822C138340851ED75017AC /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0902D4D440FA388A466A467BB2FF14C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C688D4C95AA58B04AD3302073DC1C96;
+			remoteInfo = SwiftySound;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01B28852947363431D412D1797D45331 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
+		0759DC1B13822C138340851ED75017AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0E0EDF1358453F20D0C94A860170071D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F6BDD9BB4C49A9966790EE7ADA2C996 /* Pods-SwiftySoundExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySoundExample.debug.xcconfig"; sourceTree = "<group>"; };
+		210393D11227A1356B2C28A6F2B2D7DB /* SwiftySound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftySound.framework; path = SwiftySound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		222E2798184E4CBE654D589DEAC73260 /* Pods-SwiftySoundExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySoundExample-umbrella.h"; sourceTree = "<group>"; };
+		63DC3C7B33AB8DB143F0C1288779E625 /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		6446DA2C9C7DF05BF40F20704BC93ECD /* Pods-SwiftySoundExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySoundExample-resources.sh"; sourceTree = "<group>"; };
+		8823D08843A0FF14A093297754C72375 /* Pods_SwiftySoundExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftySoundExample.framework; path = "Pods-SwiftySoundExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C1C26C586197882B033B2A970580F1A /* Pods-SwiftySoundExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftySoundExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		9EE396EE6E3C63E366D9A9B0EDD6F7D6 /* Pods-SwiftySoundExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySoundExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A0B6CCA9CA773600F257A00B5F878288 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
+		BCD169A90F97589A0A8A7729998D287E /* Pods-SwiftySoundExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftySoundExample.modulemap"; sourceTree = "<group>"; };
+		C051F14AA01CD0C9DF14C92A1E136EFC /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
+		CA4AB93EF1A126FB098157A82EFB9E90 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftySound.modulemap; sourceTree = "<group>"; };
+		CC253E0EE973536A22583917FF5B50AA /* Pods-SwiftySoundExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySoundExample.release.xcconfig"; sourceTree = "<group>"; };
+		CE09EE089363BB225C2D3B97EA86D345 /* Pods-SwiftySoundExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySoundExample-frameworks.sh"; sourceTree = "<group>"; };
+		D5421EBBD58732E72CB960F0CFFF9E7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC592E32F1234BF031DC23EB176E8F97 /* SwiftySound.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.xcconfig; sourceTree = "<group>"; };
+		EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		EE4FC114099CAA3776587600EAF2666C /* Pods-SwiftySoundExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySoundExample-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBDF1AFF0A523AF435F4AEC7EB02E20F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB7306A55E3CFA2409D4FB3E8FB236A /* AVFoundation.framework in Frameworks */,
+				07CA2148E0383EC3D629E990C68E9519 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4D2B868C0F6B9EDFFB58FEF1439EF12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD3E297A62C3A62AE83C7442C893A4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F80920DE8E596771DDF7EEC224A6CB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63DC3C7B33AB8DB143F0C1288779E625 /* Sound.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B81937E2358A876EB30CC711EF4620 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5942E0FBDAA1A1B93E07DF4ACFB69E8B /* Pods-SwiftySoundExample */ = {
+			isa = PBXGroup;
+			children = (
+				0E0EDF1358453F20D0C94A860170071D /* Info.plist */,
+				BCD169A90F97589A0A8A7729998D287E /* Pods-SwiftySoundExample.modulemap */,
+				9EE396EE6E3C63E366D9A9B0EDD6F7D6 /* Pods-SwiftySoundExample-acknowledgements.markdown */,
+				9C1C26C586197882B033B2A970580F1A /* Pods-SwiftySoundExample-acknowledgements.plist */,
+				EE4FC114099CAA3776587600EAF2666C /* Pods-SwiftySoundExample-dummy.m */,
+				CE09EE089363BB225C2D3B97EA86D345 /* Pods-SwiftySoundExample-frameworks.sh */,
+				6446DA2C9C7DF05BF40F20704BC93ECD /* Pods-SwiftySoundExample-resources.sh */,
+				222E2798184E4CBE654D589DEAC73260 /* Pods-SwiftySoundExample-umbrella.h */,
+				0F6BDD9BB4C49A9966790EE7ADA2C996 /* Pods-SwiftySoundExample.debug.xcconfig */,
+				CC253E0EE973536A22583917FF5B50AA /* Pods-SwiftySoundExample.release.xcconfig */,
+			);
+			name = "Pods-SwiftySoundExample";
+			path = "Target Support Files/Pods-SwiftySoundExample";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC2D8F496BAA45498624938AE5000832 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				8C37C6562643C7AB4DB4C44765E55A7D /* Products */,
+				8922EF1CEFAF0D40AD0112F9C50F5BB3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8922EF1CEFAF0D40AD0112F9C50F5BB3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5942E0FBDAA1A1B93E07DF4ACFB69E8B /* Pods-SwiftySoundExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		896AABF1123D31DB4A2C8E93C55F7624 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5421EBBD58732E72CB960F0CFFF9E7C /* Info.plist */,
+				CA4AB93EF1A126FB098157A82EFB9E90 /* SwiftySound.modulemap */,
+				DC592E32F1234BF031DC23EB176E8F97 /* SwiftySound.xcconfig */,
+				A0B6CCA9CA773600F257A00B5F878288 /* SwiftySound-dummy.m */,
+				01B28852947363431D412D1797D45331 /* SwiftySound-prefix.pch */,
+				C051F14AA01CD0C9DF14C92A1E136EFC /* SwiftySound-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftySound";
+			sourceTree = "<group>";
+		};
+		8C37C6562643C7AB4DB4C44765E55A7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8823D08843A0FF14A093297754C72375 /* Pods_SwiftySoundExample.framework */,
+				210393D11227A1356B2C28A6F2B2D7DB /* SwiftySound.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		983CF526808F84A5A208B8C8253A3565 /* SwiftySound */ = {
+			isa = PBXGroup;
+			children = (
+				10F80920DE8E596771DDF7EEC224A6CB /* Classes */,
+				896AABF1123D31DB4A2C8E93C55F7624 /* Support Files */,
+			);
+			name = SwiftySound;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BC2D8F496BAA45498624938AE5000832 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				983CF526808F84A5A208B8C8253A3565 /* SwiftySound */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F9B81937E2358A876EB30CC711EF4620 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB22ADC87CA3E02355DDE222DFCAB12A /* AVFoundation.framework */,
+				0759DC1B13822C138340851ED75017AC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		19FBD6C91558D568DF6EEA63BA9D8DA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDC402CFD70C213C11361CB17766EA8 /* SwiftySound-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B5C867B7834A3B3F2932484B4C38F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2A89870DABF33F3629A7E47F8509B0 /* Pods-SwiftySoundExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6C688D4C95AA58B04AD3302073DC1C96 /* SwiftySound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97774B735B3F34255BB9741667E9538 /* Build configuration list for PBXNativeTarget "SwiftySound" */;
+			buildPhases = (
+				003EA516E6ADDC2A6BF448999E38FEBC /* Sources */,
+				BBDF1AFF0A523AF435F4AEC7EB02E20F /* Frameworks */,
+				19FBD6C91558D568DF6EEA63BA9D8DA8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftySound;
+			productName = SwiftySound;
+			productReference = 210393D11227A1356B2C28A6F2B2D7DB /* SwiftySound.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB75B31C7C249AA6FCDC733B5F7EE9C5 /* Pods-SwiftySoundExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 686C8AB3B2EEA3E79B13FA1AA80994D4 /* Build configuration list for PBXNativeTarget "Pods-SwiftySoundExample" */;
+			buildPhases = (
+				9A87D58BA153C6FC4C794E12C38899E2 /* Sources */,
+				E4D2B868C0F6B9EDFFB58FEF1439EF12 /* Frameworks */,
+				2B7B5C867B7834A3B3F2932484B4C38F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B978CA7C5696ECCB81C294F72CBAE4A3 /* PBXTargetDependency */,
+			);
+			name = "Pods-SwiftySoundExample";
+			productName = "Pods-SwiftySoundExample";
+			productReference = 8823D08843A0FF14A093297754C72375 /* Pods_SwiftySoundExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8C37C6562643C7AB4DB4C44765E55A7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB75B31C7C249AA6FCDC733B5F7EE9C5 /* Pods-SwiftySoundExample */,
+				6C688D4C95AA58B04AD3302073DC1C96 /* SwiftySound */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		003EA516E6ADDC2A6BF448999E38FEBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0836E867A89B12C458317C35396ECFC8 /* Sound.swift in Sources */,
+				98E87B9B59C557B4D0CE2EC9D538ED26 /* SwiftySound-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A87D58BA153C6FC4C794E12C38899E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0C74224245EA18A5672775C443EE2D /* Pods-SwiftySoundExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B978CA7C5696ECCB81C294F72CBAE4A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftySound;
+			target = 6C688D4C95AA58B04AD3302073DC1C96 /* SwiftySound */;
+			targetProxy = C0902D4D440FA388A466A467BB2FF14C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		371CDA41A154BE496E4952A17E5BC232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC592E32F1234BF031DC23EB176E8F97 /* SwiftySound.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftySound/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftySound;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40EF04C6DC840382D7A2D26875F8CCE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC253E0EE973536A22583917FF5B50AA /* Pods-SwiftySoundExample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySoundExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySoundExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54F67F69CC3B62A1617ADBC04A99E112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC592E32F1234BF031DC23EB176E8F97 /* SwiftySound.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftySound/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftySound;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB0C1CE03CBF881FCF45AE18840FD1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6BDD9BB4C49A9966790EE7ADA2C996 /* Pods-SwiftySoundExample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftySoundExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftySoundExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		686C8AB3B2EEA3E79B13FA1AA80994D4 /* Build configuration list for PBXNativeTarget "Pods-SwiftySoundExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0C1CE03CBF881FCF45AE18840FD1DA /* Debug */,
+				40EF04C6DC840382D7A2D26875F8CCE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E97774B735B3F34255BB9741667E9538 /* Build configuration list for PBXNativeTarget "SwiftySound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54F67F69CC3B62A1617ADBC04A99E112 /* Debug */,
+				371CDA41A154BE496E4952A17E5BC232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
