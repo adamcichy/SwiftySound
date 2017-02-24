@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = 'Swifty Sound'
 
   s.description  = <<-DESC
-                   SwiftySound is a simple AVFoundation wrapper for iOS
+                   Swifty Sound is a simple library that lets you deal with Swift sounds easily.
                    DESC
 
   s.homepage     = 'https://github.com/adamcichy/SwiftySound'
