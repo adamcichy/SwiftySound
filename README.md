@@ -4,6 +4,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![CocoaPods](https://img.shields.io/cocoapods/p/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 
 ## Overview
 Swifty Sound is a simple library that lets you deal with Swift sounds easily.
