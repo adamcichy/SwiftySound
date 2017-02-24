@@ -30,7 +30,9 @@ import AVFoundation
 /// Sound is a class that allows you to easily play sounds in Swift. It uses AVFoundation framework under the hood.
 open class Sound {
 
-    /// Number of AVAudioPlayer instances created for every sound. SwiftySound creates 5 players for every sound to make sure that it will be able to play the same sound more than once. If your app doesn't need this functionality, you can reduce the number of players to 1 and reduce memory usage.
+    // MARK: - Global settings
+
+    /// Number of AVAudioPlayer instances created for every sound. SwiftySound creates 5 players for every sound to make sure that it will be able to play the same sound more than once. If your app doesn't need this functionality, you can reduce the number of players to 1 and reduce memory usage. You can increase the number if your app plays the sound more than 5 times at the same time. 
     public static var playersPerSound: Int = 5 {
         didSet {
             Sound.stopAll()
@@ -59,6 +61,10 @@ open class Sound {
     private var counter = 0
 
     // MARK: - Initialization
+
+    /// Create a sound object
+    ///
+    /// - Parameter url: Sound file URL
     public init?(url: URL) {
         var myPlayers: [AVAudioPlayer] = []
         for _ in 0..<Sound.playersPerSound {
