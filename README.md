@@ -57,13 +57,15 @@ sound.play()
 - [x] Playing single sounds
 - [x] Loops
 - [x] Infinite loops
+- [x] Playing the same sound multiple times simultaneously
 - [x] Global static variable to enable/disable all sounds
 
 ## Requirements
+- Swift 3
+- Xcode 8.0 or later
 - iOS 8.0 or later
 - tvOS 9.0 or later
 - OS X 10.10 or later
-- Xcode 8.0 or later
 
 ## Installation
 ### Installation with CocoaPods
@@ -71,13 +73,21 @@ sound.play()
 [CocoaPods](http://cocoapods.org/) is a dependency manager which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Get Started](http://cocoapods.org/#get_started) section for more details.
 
 #### Podfile
-```
+```ruby
 platform :ios, '8.0'
 use_frameworks!
 pod 'SwiftySound'
 ```
+### Installation with Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods.
 
-### Manually
+To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage)
+
+#### Cartfile
+```
+github "adamcichy/SwiftySound"
+```
+### Manual installation
 Drop the `Sound.swift` file into your project, link against `AVFoundation.framework` and you are ready to go.
 
 ## Licenses

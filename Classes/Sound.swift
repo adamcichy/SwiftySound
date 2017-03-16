@@ -27,6 +27,40 @@
 import Foundation
 import AVFoundation
 
+/// SoundCategory is a convenient wrapper for AVAudioSessions category constants.
+public enum SoundCategory {
+
+    /// Equivalent of AVAudioSessionCategoryAmbient
+    case ambient
+    /// Equivalent of AVAudioSessionCategorySoloAmbient
+    case soloAmbient
+    /// Equivalent of AVAudioSessionCategoryPlayback
+    case playback
+    /// Equivalent of AVAudioSessionCategoryRecord
+    case record
+    /// Equivalent of AVAudioSessionCategoryPlayAndRecord
+    case playAndRecord
+
+    fileprivate var avFoundationCategory: String {
+        get {
+            switch self {
+            case .ambient:
+                return AVAudioSessionCategoryAmbient
+            case .soloAmbient:
+                return AVAudioSessionCategorySoloAmbient
+            case .playback:
+                return AVAudioSessionCategoryPlayback
+            case .record:
+                return AVAudioSessionCategoryRecord
+            case .playAndRecord:
+                return AVAudioSessionCategoryPlayAndRecord
+            default:
+                return AVAudioSessionCategoryAmbient
+            }
+        }
+    }
+}
+
 /// Sound is a class that allows you to easily play sounds in Swift. It uses AVFoundation framework under the hood.
 open class Sound {
 
@@ -37,6 +71,17 @@ open class Sound {
         didSet {
             Sound.stopAll()
             Sound.sounds.removeAll()
+        }
+    }
+
+    /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
+    public static var category: SoundCategory = {
+            let defaultCategory = SoundCategory.ambient
+            try? AVAudioSession.sharedInstance().setCategory(defaultCategory.avFoundationCategory)
+            return defaultCategory
+        }() {
+        didSet {
+            try? AVAudioSession.sharedInstance().setCategory(category.avFoundationCategory)
         }
     }
 
@@ -66,8 +111,11 @@ open class Sound {
     ///
     /// - Parameter url: Sound file URL
     public init?(url: URL) {
+        _ = Sound.category
+        let playersPerSound = max(Sound.playersPerSound, 1)
         var myPlayers: [AVAudioPlayer] = []
-        for _ in 0..<Sound.playersPerSound {
+        myPlayers.reserveCapacity(playersPerSound)
+        for _ in 0..<playersPerSound {
             if let player = try? AVAudioPlayer(contentsOf: url) {
                 myPlayers.append(player)
             }
