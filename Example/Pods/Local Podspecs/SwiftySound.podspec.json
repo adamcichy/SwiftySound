@@ -1,8 +1,7 @@
 {
   "name": "SwiftySound",
-  "version": "0.1.0",
-  "summary": "Swifty Sound",
-  "description": "SwiftySound is a simple AVFoundation wrapper for iOS",
+  "version": "0.2.0",
+  "summary": "Swifty Sound is a simple library that lets you play sounds with a single line of code.",
   "homepage": "https://github.com/adamcichy/SwiftySound",
   "license": "MIT",
   "authors": {
@@ -15,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/adamcichy/SwiftySound.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "source_files": "Classes/**/*.swift",
   "frameworks": [

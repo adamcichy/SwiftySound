@@ -46,6 +46,13 @@ Sound.enabled = false
 
 The value of `Sound.enabled` property will be automatically persisted in `UserDefaults` and restored on the next launch of your app.
 
+Change sound categories. SwiftySound provides a simple way of changing sound category:
+
+```swift
+Sound.category = .ambient
+```
+This changes the category of the underlying shared `AVAudioSession` instance. The default value is `SoundCategory.ambient`.
+
 #####Creating instances of `Sound` class
 You can also create an instance of a Sound class and store it somewhere in your app.
 ```swift

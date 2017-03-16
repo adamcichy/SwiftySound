@@ -54,8 +54,6 @@ public enum SoundCategory {
                 return AVAudioSessionCategoryRecord
             case .playAndRecord:
                 return AVAudioSessionCategoryPlayAndRecord
-            default:
-                return AVAudioSessionCategoryAmbient
             }
         }
     }
