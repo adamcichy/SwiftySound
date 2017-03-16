@@ -28,6 +28,7 @@ import Foundation
 import AVFoundation
 
 /// SoundCategory is a convenient wrapper for AVAudioSessions category constants.
+#if os(iOS) || os(tvOS)
 public enum SoundCategory {
 
     /// Equivalent of AVAudioSessionCategoryAmbient
@@ -58,6 +59,7 @@ public enum SoundCategory {
         }
     }
 }
+#endif
 
 /// Sound is a class that allows you to easily play sounds in Swift. It uses AVFoundation framework under the hood.
 open class Sound {
@@ -73,6 +75,7 @@ open class Sound {
     }
 
     /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
+    #if os(iOS) || os(tvOS)
     public static var category: SoundCategory = {
             let defaultCategory = SoundCategory.ambient
             try? AVAudioSession.sharedInstance().setCategory(defaultCategory.avFoundationCategory)
@@ -82,6 +85,7 @@ open class Sound {
             try? AVAudioSession.sharedInstance().setCategory(category.avFoundationCategory)
         }
     }
+    #endif
 
     private static var sounds = [URL: Sound]()
 
@@ -109,7 +113,9 @@ open class Sound {
     ///
     /// - Parameter url: Sound file URL
     public init?(url: URL) {
+        #if os(iOS) || os(tvOS)
         _ = Sound.category
+        #endif
         let playersPerSound = max(Sound.playersPerSound, 1)
         var myPlayers: [AVAudioPlayer] = []
         myPlayers.reserveCapacity(playersPerSound)
