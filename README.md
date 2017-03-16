@@ -8,6 +8,7 @@
 
 ## Overview
 Swifty Sound is a simple library that lets you deal with Swift sounds easily.
+
 #####Static methods
 
 ```swift
@@ -54,6 +55,7 @@ Sound.category = .ambient
 This changes the category of the underlying shared `AVAudioSession` instance. The default value is `SoundCategory.ambient`. Due to `AVAudioSession` architecture, this property is not available on macOS.
 
 #####Creating instances of `Sound` class
+
 You can also create an instance of a Sound class and store it somewhere in your app.
 ```swift
 let sound = Sound(url: fileURL)
