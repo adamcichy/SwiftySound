@@ -1,4 +1,4 @@
-##Swifty Sound
+## Swifty Sound
 
 [![CocoaPods](https://img.shields.io/cocoapods/l/SwiftySound.svg)](https://raw.githubusercontent.com/adamcichy/SwiftySound/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
@@ -10,7 +10,7 @@
 ## Overview
 Swifty Sound is a simple library that lets you deal with Swift sounds easily.
 
-#####Static methods
+##### Static methods
 
 ```swift
 Sound.play(file: "dog.wav")
@@ -55,7 +55,7 @@ Sound.category = .ambient
 ```
 This changes the category of the underlying shared `AVAudioSession` instance. The default value is `SoundCategory.ambient`. Due to `AVAudioSession` architecture, this property is not available on macOS.
 
-#####Creating instances of `Sound` class
+##### Creating instances of `Sound` class
 
 You can also create an instance of a Sound class and store it somewhere in your app.
 ```swift
