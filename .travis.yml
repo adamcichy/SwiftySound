@@ -1,4 +1,4 @@
 language: objective-c
-osx_image: xcode8.2
+osx_image: xcode8.3
 script:
     - xcodebuild clean build -sdk iphonesimulator -workspace Example/SwiftySoundExample.xcworkspace -scheme SwiftySoundExample CODE_SIGNING_REQUIRED=NO
