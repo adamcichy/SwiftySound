@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01EE0AB662C6AC59BA154DC6 /* Pods_SwiftySoundExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC2A01ED22D22001C4662C /* Pods_SwiftySoundExampleTests.framework */; };
 		5092FCEAC1A44161CF7066B4 /* Pods_SwiftySoundExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7358DDCAAB2D0DDD7CF4FCFF /* Pods_SwiftySoundExample.framework */; };
 		661933F71E5CD6A50042D25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661933F61E5CD6A50042D25E /* AppDelegate.swift */; };
 		661933F91E5CD6A50042D25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661933F81E5CD6A50042D25E /* ViewController.swift */; };
@@ -14,9 +15,27 @@
 		661933FE1E5CD6A50042D25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661933FD1E5CD6A50042D25E /* Assets.xcassets */; };
 		6619340A1E5CD8DE0042D25E /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661934091E5CD8DE0042D25E /* dog.wav */; };
 		6619340C1E5CD8E50042D25E /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6619340B1E5CD8E50042D25E /* cat.wav */; };
+		6635A33A1E8E775B00A3E02B /* SwiftySoundExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6635A3391E8E775B00A3E02B /* SwiftySoundExampleTests.swift */; };
+		6635A3411E8E7AD000A3E02B /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661934091E5CD8DE0042D25E /* dog.wav */; };
+		6635A3421E8E7AD300A3E02B /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6619340B1E5CD8E50042D25E /* cat.wav */; };
+		6635A3441E8E7BF800A3E02B /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3431E8E7BF800A3E02B /* empty.wav */; };
+		6635A3461E8E7D2B00A3E02B /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3451E8E7D2B00A3E02B /* File.txt */; };
+		6635A3471E8E7E0400A3E02B /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3431E8E7BF800A3E02B /* empty.wav */; };
+		6635A3481E8E7E0700A3E02B /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3451E8E7D2B00A3E02B /* File.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6635A33C1E8E775B00A3E02B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 661933EB1E5CD6A50042D25E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661933F21E5CD6A50042D25E;
+			remoteInfo = SwiftySoundExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2F2A2722C40C91422A97EDB6 /* Pods-SwiftySoundExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExampleTests/Pods-SwiftySoundExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6195CDC081CD6998CC2DA769 /* Pods-SwiftySoundExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.release.xcconfig"; sourceTree = "<group>"; };
 		661933F31E5CD6A50042D25E /* SwiftySoundExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySoundExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661933F61E5CD6A50042D25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,8 +45,15 @@
 		661934021E5CD6A50042D25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661934091E5CD8DE0042D25E /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
 		6619340B1E5CD8E50042D25E /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
+		6635A3371E8E775B00A3E02B /* SwiftySoundExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySoundExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6635A3391E8E775B00A3E02B /* SwiftySoundExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySoundExampleTests.swift; sourceTree = "<group>"; };
+		6635A33B1E8E775B00A3E02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6635A3431E8E7BF800A3E02B /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
+		6635A3451E8E7D2B00A3E02B /* File.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
 		7358DDCAAB2D0DDD7CF4FCFF /* Pods_SwiftySoundExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySoundExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BB230849D8C4FF3045DA57 /* Pods-SwiftySoundExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.debug.xcconfig"; sourceTree = "<group>"; };
+		9AEC2A01ED22D22001C4662C /* Pods_SwiftySoundExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySoundExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD5D17CC8D1E87F25034D6E7 /* Pods-SwiftySoundExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExampleTests/Pods-SwiftySoundExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +65,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6635A3341E8E775B00A3E02B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01EE0AB662C6AC59BA154DC6 /* Pods_SwiftySoundExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				7358DDCAAB2D0DDD7CF4FCFF /* Pods_SwiftySoundExample.framework */,
+				9AEC2A01ED22D22001C4662C /* Pods_SwiftySoundExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -54,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				661933F51E5CD6A50042D25E /* SwiftySoundExample */,
+				6635A3381E8E775B00A3E02B /* SwiftySoundExampleTests */,
 				661933F41E5CD6A50042D25E /* Products */,
 				8EF6E1263B1603F9D36F2657 /* Pods */,
 				52865F20D781895CCA9392E7 /* Frameworks */,
@@ -64,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				661933F31E5CD6A50042D25E /* SwiftySoundExample.app */,
+				6635A3371E8E775B00A3E02B /* SwiftySoundExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +114,7 @@
 				661933FD1E5CD6A50042D25E /* Assets.xcassets */,
 				661934021E5CD6A50042D25E /* Info.plist */,
 				661934081E5CD8CF0042D25E /* Sounds */,
+				6635A3451E8E7D2B00A3E02B /* File.txt */,
 			);
 			path = SwiftySoundExample;
 			sourceTree = "<group>";
@@ -86,8 +124,18 @@
 			children = (
 				661934091E5CD8DE0042D25E /* dog.wav */,
 				6619340B1E5CD8E50042D25E /* cat.wav */,
+				6635A3431E8E7BF800A3E02B /* empty.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		6635A3381E8E775B00A3E02B /* SwiftySoundExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6635A3391E8E775B00A3E02B /* SwiftySoundExampleTests.swift */,
+				6635A33B1E8E775B00A3E02B /* Info.plist */,
+			);
+			path = SwiftySoundExampleTests;
 			sourceTree = "<group>";
 		};
 		8EF6E1263B1603F9D36F2657 /* Pods */ = {
@@ -95,6 +143,8 @@
 			children = (
 				84BB230849D8C4FF3045DA57 /* Pods-SwiftySoundExample.debug.xcconfig */,
 				6195CDC081CD6998CC2DA769 /* Pods-SwiftySoundExample.release.xcconfig */,
+				DD5D17CC8D1E87F25034D6E7 /* Pods-SwiftySoundExampleTests.debug.xcconfig */,
+				2F2A2722C40C91422A97EDB6 /* Pods-SwiftySoundExampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -122,19 +172,45 @@
 			productReference = 661933F31E5CD6A50042D25E /* SwiftySoundExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6635A3361E8E775B00A3E02B /* SwiftySoundExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6635A3401E8E775B00A3E02B /* Build configuration list for PBXNativeTarget "SwiftySoundExampleTests" */;
+			buildPhases = (
+				F069B7D6EE16648A943212A4 /* [CP] Check Pods Manifest.lock */,
+				6635A3331E8E775B00A3E02B /* Sources */,
+				6635A3341E8E775B00A3E02B /* Frameworks */,
+				6635A3351E8E775B00A3E02B /* Resources */,
+				EB2E3226F6E744727368E2D6 /* [CP] Embed Pods Frameworks */,
+				91A1C801C56D7DEF89558883 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6635A33D1E8E775B00A3E02B /* PBXTargetDependency */,
+			);
+			name = SwiftySoundExampleTests;
+			productName = SwiftySoundExampleTests;
+			productReference = 6635A3371E8E775B00A3E02B /* SwiftySoundExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		661933EB1E5CD6A50042D25E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Adam CIchy";
 				TargetAttributes = {
 					661933F21E5CD6A50042D25E = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+					};
+					6635A3361E8E775B00A3E02B = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 661933F21E5CD6A50042D25E;
 					};
 				};
 			};
@@ -152,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				661933F21E5CD6A50042D25E /* SwiftySoundExample */,
+				6635A3361E8E775B00A3E02B /* SwiftySoundExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -163,8 +240,21 @@
 			files = (
 				661933FE1E5CD6A50042D25E /* Assets.xcassets in Resources */,
 				6619340A1E5CD8DE0042D25E /* dog.wav in Resources */,
+				6635A3481E8E7E0700A3E02B /* File.txt in Resources */,
 				661933FC1E5CD6A50042D25E /* Main.storyboard in Resources */,
+				6635A3471E8E7E0400A3E02B /* empty.wav in Resources */,
 				6619340C1E5CD8E50042D25E /* cat.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6635A3351E8E775B00A3E02B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6635A3411E8E7AD000A3E02B /* dog.wav in Resources */,
+				6635A3421E8E7AD300A3E02B /* cat.wav in Resources */,
+				6635A3461E8E7D2B00A3E02B /* File.txt in Resources */,
+				6635A3441E8E7BF800A3E02B /* empty.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +291,52 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		91A1C801C56D7DEF89558883 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftySoundExampleTests/Pods-SwiftySoundExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A087DB3024E227D3F748D49B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2E3226F6E744727368E2D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftySoundExampleTests/Pods-SwiftySoundExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F069B7D6EE16648A943212A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,7 +363,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6635A3331E8E775B00A3E02B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6635A33A1E8E775B00A3E02B /* SwiftySoundExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6635A33D1E8E775B00A3E02B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 661933F21E5CD6A50042D25E /* SwiftySoundExample */;
+			targetProxy = 6635A33C1E8E775B00A3E02B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		661933FA1E5CD6A50042D25E /* Main.storyboard */ = {
@@ -363,6 +514,38 @@
 			};
 			name = Release;
 		};
+		6635A33E1E8E775B00A3E02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD5D17CC8D1E87F25034D6E7 /* Pods-SwiftySoundExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SwiftySoundExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySoundExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftySoundExample.app/SwiftySoundExample";
+			};
+			name = Debug;
+		};
+		6635A33F1E8E775B00A3E02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2A2722C40C91422A97EDB6 /* Pods-SwiftySoundExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SwiftySoundExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySoundExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftySoundExample.app/SwiftySoundExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -380,6 +563,15 @@
 			buildConfigurations = (
 				661934061E5CD6A50042D25E /* Debug */,
 				661934071E5CD6A50042D25E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6635A3401E8E775B00A3E02B /* Build configuration list for PBXNativeTarget "SwiftySoundExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6635A33E1E8E775B00A3E02B /* Debug */,
+				6635A33F1E8E775B00A3E02B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

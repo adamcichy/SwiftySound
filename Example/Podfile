@@ -1,9 +1,20 @@
 platform :ios, '8.0'
+use_frameworks!
+
+def pods
+
+    pod 'SwiftySound', :path => '..'
+
+end
 
 target 'SwiftySoundExample' do
 
-    use_frameworks!
+    pods
 
-    pod 'SwiftySound', :path => '..'
+end
+
+target 'SwiftySoundExampleTests' do
+
+    pods
 
 end
