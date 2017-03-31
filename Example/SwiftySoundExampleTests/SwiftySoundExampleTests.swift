@@ -11,11 +11,51 @@ import SwiftySound
 
 class SwiftySoundExampleTests: XCTestCase {
 
+    var catSound: Sound?
+
     override func setUp() {
         super.setUp()
         Sound.enabled = true
+        if let url = Bundle.main.url(forResource: "cat", withExtension: "wav") {
+            catSound = Sound(url: url)
+        }
     }
 
+    // MARK: Properties
+
+    func testDefaultSoundCategory() {
+        let defaultCategory = Sound.category
+        XCTAssertEqual(defaultCategory, .ambient)
+    }
+
+    func testCategoryChange() {
+        Sound.category = SoundCategory.playAndRecord
+        XCTAssertEqual(Sound.category, .playAndRecord)
+        Sound.category = SoundCategory.record
+        XCTAssertEqual(Sound.category, .record)
+        Sound.category = SoundCategory.playback
+        XCTAssertEqual(Sound.category, .playback)
+        Sound.category = SoundCategory.soloAmbient
+        XCTAssertEqual(Sound.category, .soloAmbient)
+        Sound.category = SoundCategory.ambient
+        XCTAssertEqual(Sound.category, .ambient)
+    }
+
+    func testEnabled() {
+        Sound.enabled = false
+        XCTAssertFalse(Sound.enabled)
+        Sound.enabled = true
+        XCTAssertTrue(Sound.enabled)
+    }
+
+    func testPlayersPerSound() {
+        Sound.playersPerSound = 10
+        XCTAssertEqual(Sound.playersPerSound, 10)
+        Sound.playersPerSound = 5
+        XCTAssertEqual(Sound.playersPerSound, 5)
+    }
+
+    // MARK: Playback
     func testCreatingInstance() {
         if let url = Bundle.main.url(forResource: "dog", withExtension: "wav") {
             let sound = Sound(url: url)
@@ -75,31 +115,6 @@ class SwiftySoundExampleTests: XCTestCase {
         }
     }
 
-    func testDefaultSoundCategory() {
-        let defaultCategory = Sound.category
-        XCTAssertEqual(defaultCategory, .ambient)
-    }
-
-    func testCategoryChange() {
-        Sound.category = SoundCategory.playAndRecord
-        XCTAssertEqual(Sound.category, .playAndRecord)
-        Sound.category = SoundCategory.record
-        XCTAssertEqual(Sound.category, .record)
-        Sound.category = SoundCategory.playback
-        XCTAssertEqual(Sound.category, .playback)
-        Sound.category = SoundCategory.soloAmbient
-        XCTAssertEqual(Sound.category, .soloAmbient)
-        Sound.category = SoundCategory.ambient
-        XCTAssertEqual(Sound.category, .ambient)
-    }
-
-    func testEnabled() {
-        Sound.enabled = false
-        XCTAssertFalse(Sound.enabled)
-        Sound.enabled = true
-        XCTAssertTrue(Sound.enabled)
-    }
-
     func testNotEnabledPlayback() {
         Sound.enabled = false
         if let url = Bundle.main.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
@@ -114,13 +129,6 @@ class SwiftySoundExampleTests: XCTestCase {
             XCTAssert(resultForStaticMethodWhenSoundEnabled)
         }
         Sound.enabled = true
-    }
-
-    func testPlayersPerSound() {
-        Sound.playersPerSound = 10
-        XCTAssertEqual(Sound.playersPerSound, 10)
-        Sound.playersPerSound = 5
-        XCTAssertEqual(Sound.playersPerSound, 5)
     }
 
 }
