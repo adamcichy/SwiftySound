@@ -234,12 +234,12 @@ public protocol Player: class {
     var numberOfLoops: Int { get set }
 }
 
-extension AVAudioPlayer : Player {}
+extension AVAudioPlayer: Player {}
 
 #if os(iOS) || os(tvOS)
 public protocol Session: class {
     func setCategory(_ category: String) throws
 }
 
-extension AVAudioSession : Session {}
+extension AVAudioSession: Session {}
 #endif
