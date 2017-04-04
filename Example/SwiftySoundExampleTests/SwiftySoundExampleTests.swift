@@ -9,12 +9,35 @@
 import XCTest
 import SwiftySound
 
+extension String: Error {}
+
+final class MockPlayer: Player {
+    var numberOfLoops: Int = 0
+
+    required init(contentsOf url: URL) throws {
+        let fm = FileManager.default
+        let attributes = try fm.attributesOfItem(atPath: url.path)
+        let size = attributes[FileAttributeKey.size]
+        if let fileSize = size as? Int64, fileSize == 0 {
+            throw "Empty file"
+        }
+    }
+
+    func stop() {
+    }
+
+    func play() -> Bool {
+        return true
+    }
+}
+
 class SwiftySoundExampleTests: XCTestCase {
 
     var catSound: Sound?
 
     override func setUp() {
         super.setUp()
+        Sound.playerClass = MockPlayer.self
         Sound.enabled = true
         if let url = Bundle.main.url(forResource: "cat", withExtension: "wav") {
             catSound = Sound(url: url)
@@ -94,11 +117,6 @@ class SwiftySoundExampleTests: XCTestCase {
 
     func testEmpty() {
         let result = Sound.play(file: "empty.wav")
-        XCTAssertFalse(result)
-    }
-
-    func testIncorrectFileType() {
-        let result = Sound.play(file: "File.txt")
         XCTAssertFalse(result)
     }
 

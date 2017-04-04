@@ -29,36 +29,36 @@ import AVFoundation
 
 /// SoundCategory is a convenient wrapper for AVAudioSessions category constants.
 #if os(iOS) || os(tvOS)
-public enum SoundCategory {
+    public enum SoundCategory {
 
-    /// Equivalent of AVAudioSessionCategoryAmbient
-    case ambient
-    /// Equivalent of AVAudioSessionCategorySoloAmbient
-    case soloAmbient
-    /// Equivalent of AVAudioSessionCategoryPlayback
-    case playback
-    /// Equivalent of AVAudioSessionCategoryRecord
-    case record
-    /// Equivalent of AVAudioSessionCategoryPlayAndRecord
-    case playAndRecord
+        /// Equivalent of AVAudioSessionCategoryAmbient
+        case ambient
+        /// Equivalent of AVAudioSessionCategorySoloAmbient
+        case soloAmbient
+        /// Equivalent of AVAudioSessionCategoryPlayback
+        case playback
+        /// Equivalent of AVAudioSessionCategoryRecord
+        case record
+        /// Equivalent of AVAudioSessionCategoryPlayAndRecord
+        case playAndRecord
 
-    fileprivate var avFoundationCategory: String {
-        get {
-            switch self {
-            case .ambient:
-                return AVAudioSessionCategoryAmbient
-            case .soloAmbient:
-                return AVAudioSessionCategorySoloAmbient
-            case .playback:
-                return AVAudioSessionCategoryPlayback
-            case .record:
-                return AVAudioSessionCategoryRecord
-            case .playAndRecord:
-                return AVAudioSessionCategoryPlayAndRecord
+        fileprivate var avFoundationCategory: String {
+            get {
+                switch self {
+                case .ambient:
+                    return AVAudioSessionCategoryAmbient
+                case .soloAmbient:
+                    return AVAudioSessionCategorySoloAmbient
+                case .playback:
+                    return AVAudioSessionCategoryPlayback
+                case .record:
+                    return AVAudioSessionCategoryRecord
+                case .playAndRecord:
+                    return AVAudioSessionCategoryPlayAndRecord
+                }
             }
         }
     }
-}
 #endif
 
 /// Sound is a class that allows you to easily play sounds in Swift. It uses AVFoundation framework under the hood.
@@ -74,15 +74,17 @@ open class Sound {
         }
     }
 
+    public static var session: Session = AVAudioSession.sharedInstance()
+
     /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
     #if os(iOS) || os(tvOS)
     public static var category: SoundCategory = {
-            let defaultCategory = SoundCategory.ambient
-            try? AVAudioSession.sharedInstance().setCategory(defaultCategory.avFoundationCategory)
-            return defaultCategory
+        let defaultCategory = SoundCategory.ambient
+        try? Sound.session.setCategory(defaultCategory.avFoundationCategory)
+        return defaultCategory
         }() {
         didSet {
-            try? AVAudioSession.sharedInstance().setCategory(category.avFoundationCategory)
+            try? Sound.session.setCategory(category.avFoundationCategory)
         }
     }
     #endif
@@ -103,9 +105,11 @@ open class Sound {
         }
     }
 
-    private let players: [AVAudioPlayer]
+    private let players: [Player]
 
     private var counter = 0
+
+    public static var playerClass: Player.Type = AVAudioPlayer.self
 
     // MARK: - Initialization
 
@@ -114,13 +118,13 @@ open class Sound {
     /// - Parameter url: Sound file URL
     public init?(url: URL) {
         #if os(iOS) || os(tvOS)
-        _ = Sound.category
+            _ = Sound.category
         #endif
         let playersPerSound = max(Sound.playersPerSound, 1)
-        var myPlayers: [AVAudioPlayer] = []
+        var myPlayers: [Player] = []
         myPlayers.reserveCapacity(playersPerSound)
         for _ in 0..<playersPerSound {
-            if let player = try? AVAudioPlayer(contentsOf: url) {
+            if let player = try? Sound.playerClass.init(contentsOf: url) {
                 myPlayers.append(player)
             }
         }
@@ -222,3 +226,20 @@ open class Sound {
     }
 
 }
+
+public protocol Player: class {
+    func play() -> Bool
+    func stop()
+    init(contentsOf url: URL) throws
+    var numberOfLoops: Int { get set }
+}
+
+extension AVAudioPlayer : Player {}
+
+#if os(iOS) || os(tvOS)
+public protocol Session: class {
+    func setCategory(_ category: String) throws
+}
+
+extension AVAudioSession : Session {}
+#endif

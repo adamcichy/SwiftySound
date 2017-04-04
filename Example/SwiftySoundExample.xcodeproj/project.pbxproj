@@ -19,9 +19,7 @@
 		6635A3411E8E7AD000A3E02B /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661934091E5CD8DE0042D25E /* dog.wav */; };
 		6635A3421E8E7AD300A3E02B /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6619340B1E5CD8E50042D25E /* cat.wav */; };
 		6635A3441E8E7BF800A3E02B /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3431E8E7BF800A3E02B /* empty.wav */; };
-		6635A3461E8E7D2B00A3E02B /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3451E8E7D2B00A3E02B /* File.txt */; };
 		6635A3471E8E7E0400A3E02B /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3431E8E7BF800A3E02B /* empty.wav */; };
-		6635A3481E8E7E0700A3E02B /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3451E8E7D2B00A3E02B /* File.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +47,6 @@
 		6635A3391E8E775B00A3E02B /* SwiftySoundExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySoundExampleTests.swift; sourceTree = "<group>"; };
 		6635A33B1E8E775B00A3E02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6635A3431E8E7BF800A3E02B /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
-		6635A3451E8E7D2B00A3E02B /* File.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
 		7358DDCAAB2D0DDD7CF4FCFF /* Pods_SwiftySoundExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySoundExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BB230849D8C4FF3045DA57 /* Pods-SwiftySoundExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9AEC2A01ED22D22001C4662C /* Pods_SwiftySoundExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySoundExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +111,6 @@
 				661933FD1E5CD6A50042D25E /* Assets.xcassets */,
 				661934021E5CD6A50042D25E /* Info.plist */,
 				661934081E5CD8CF0042D25E /* Sounds */,
-				6635A3451E8E7D2B00A3E02B /* File.txt */,
 			);
 			path = SwiftySoundExample;
 			sourceTree = "<group>";
@@ -240,7 +236,6 @@
 			files = (
 				661933FE1E5CD6A50042D25E /* Assets.xcassets in Resources */,
 				6619340A1E5CD8DE0042D25E /* dog.wav in Resources */,
-				6635A3481E8E7E0700A3E02B /* File.txt in Resources */,
 				661933FC1E5CD6A50042D25E /* Main.storyboard in Resources */,
 				6635A3471E8E7E0400A3E02B /* empty.wav in Resources */,
 				6619340C1E5CD8E50042D25E /* cat.wav in Resources */,
@@ -253,7 +248,6 @@
 			files = (
 				6635A3411E8E7AD000A3E02B /* dog.wav in Resources */,
 				6635A3421E8E7AD300A3E02B /* cat.wav in Resources */,
-				6635A3461E8E7D2B00A3E02B /* File.txt in Resources */,
 				6635A3441E8E7BF800A3E02B /* empty.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
