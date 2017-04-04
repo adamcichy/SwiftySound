@@ -5,6 +5,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/p/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
+[![SPM ready](https://img.shields.io/badge/SPM-ready-orange.svg)](https://swift.org/package-manager/)
 [![Build status](https://api.travis-ci.org/adamcichy/SwiftySound.svg?branch=master)](https://travis-ci.org/adamcichy/SwiftySound)
 [![codecov](https://codecov.io/gh/adamcichy/SwiftySound/branch/master/graph/badge.svg)](https://codecov.io/gh/adamcichy/SwiftySound)
 
@@ -24,7 +25,7 @@ Sound.play(url: fileURL)
 More advanced example:
 
 ```swift
-Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: 3)
+Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: 2)
 ```
 The above will play the sound three times.
 
@@ -99,7 +100,7 @@ To install with carthage, follow the instruction on [Carthage](https://github.co
 github "adamcichy/SwiftySound"
 ```
 
-### Swift Package Manager
+### Installation with Swift Package Manager
 
 The Swift Package Manager is a tool for managing the distribution of Swift code. Just add the url of this repo to your `Package.swift` file as a dependency:
 
@@ -115,7 +116,7 @@ let package = Package(
 )
 ```
 
-Then run `swift build` and wait for SPM to install SwiftySound as a dependency.
+Then run `swift build` and wait for SPM to install SwiftySound.
 
 ### Manual installation
 Drop the `Sound.swift` file into your project, link against `AVFoundation.framework` and you are ready to go.
