@@ -1,11 +1,12 @@
 //
-//  SwiftySoundExampleTests.swift
-//  SwiftySoundExampleTests
+//  SwiftySoundTests.swift
+//  Moonlight Apps
 //
-//  Created by Adam Cichy on 31/03/2017.
-//  Copyright © 2017 Adam CIchy. All rights reserved.
+//  Created by Adam Cichy on 04/04/2017.
+//  Copyright © 2017 Moonlight Apps. All rights reserved.
 //
 
+import Foundation
 import XCTest
 import SwiftySound
 
@@ -29,22 +30,26 @@ final class MockPlayer: Player {
     func play() -> Bool {
         return true
     }
+
 }
 
-class SwiftySoundExampleTests: XCTestCase {
+class SwiftySoundTests: XCTestCase {
 
     var catSound: Sound?
+
+    let bundle = Bundle(for: SwiftySoundTests.self)
 
     override func setUp() {
         super.setUp()
         Sound.playerClass = MockPlayer.self
         Sound.enabled = true
-        if let url = Bundle.main.url(forResource: "cat", withExtension: "wav") {
+        if let url = bundle.url(forResource: "cat", withExtension: "wav") {
             catSound = Sound(url: url)
         }
     }
 
     // MARK: Properties
+    #if os(iOS) || os(tvOS)
 
     func testDefaultSoundCategory() {
         let defaultCategory = Sound.category
@@ -64,6 +69,8 @@ class SwiftySoundExampleTests: XCTestCase {
         XCTAssertEqual(Sound.category, .ambient)
     }
 
+    #endif
+
     func testEnabled() {
         Sound.enabled = false
         XCTAssertFalse(Sound.enabled)
@@ -80,21 +87,21 @@ class SwiftySoundExampleTests: XCTestCase {
 
     // MARK: Playback
     func testCreatingInstance() {
-        if let url = Bundle.main.url(forResource: "dog", withExtension: "wav") {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav") {
             let sound = Sound(url: url)
             XCTAssertNotNil(sound)
         }
     }
 
     func testCreatingInstanceNonExistentFile() {
-        if let url = Bundle.main.url(forResource: "nonexistent", withExtension: "wav") {
+        if let url = bundle.url(forResource: "nonexistent", withExtension: "wav") {
             let sound = Sound(url: url)
             XCTAssertNil(sound)
         }
     }
 
     func testCreatingInstanceEmptyFile() {
-        if let url = Bundle.main.url(forResource: "empty", withExtension: "wav") {
+        if let url = bundle.url(forResource: "empty", withExtension: "wav") {
             let sound = Sound(url: url)
             XCTAssertNil(sound)
         }
@@ -106,26 +113,30 @@ class SwiftySoundExampleTests: XCTestCase {
     }
 
     func testDog() {
-        let result = Sound.play(file: "dog.wav")
-        XCTAssert(result)
+        if let url = bundle.url(forResource: "dog", withExtension: "wav") {
+            let result = Sound.play(url: url)
+            XCTAssert(result)
+        }
     }
 
     func testCat() {
-        let result = Sound.play(file: "cat.wav")
-        XCTAssert(result)
+        if let url = bundle.url(forResource: "cat", withExtension: "wav") {
+            let result = Sound.play(url: url)
+            XCTAssert(result)
+        }
     }
 
     func testEmpty() {
-        let result = Sound.play(file: "empty.wav")
-        XCTAssertFalse(result)
+        if let url = bundle.url(forResource: "empty", withExtension: "wav") {
+            let result = Sound.play(url: url)
+            XCTAssertFalse(result)
+        }
     }
 
     func testStop() {
-        if let url = Bundle.main.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
             sound.play()
             sound.stop()
-            Sound.play(file: "dog.wav")
-            Sound.stop(file: "dog.wav")
             Sound.play(url: url, numberOfLoops: -1)
             Sound.stop(for: url)
             Sound.stopAll()
@@ -135,7 +146,7 @@ class SwiftySoundExampleTests: XCTestCase {
 
     func testNotEnabledPlayback() {
         Sound.enabled = false
-        if let url = Bundle.main.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
             let result = sound.play()
             XCTAssertFalse(result)
             let resultForStaticMethod = Sound.play(file: "dog.wav")
@@ -143,8 +154,6 @@ class SwiftySoundExampleTests: XCTestCase {
             Sound.enabled = true
             let resultWhenSoundEnabled = sound.play()
             XCTAssert(resultWhenSoundEnabled)
-            let resultForStaticMethodWhenSoundEnabled = Sound.play(file: "dog.wav")
-            XCTAssert(resultForStaticMethodWhenSoundEnabled)
         }
         Sound.enabled = true
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66256D991E6051EE00F5B784"
+               BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
                BuildableName = "SwiftySound.framework"
-               BlueprintName = "SwiftySound iOS"
+               BlueprintName = "SwiftySound-tvOS"
                ReferencedContainer = "container:SwiftySound.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,9 +26,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DD75028C1C690C7A006590AF"
+               BuildableName = "SwiftySound-tvOS Tests.xctest"
+               BlueprintName = "SwiftySound-tvOS Tests"
+               ReferencedContainer = "container:SwiftySound.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+            BuildableName = "SwiftySound.framework"
+            BlueprintName = "SwiftySound-tvOS"
+            ReferencedContainer = "container:SwiftySound.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66256D991E6051EE00F5B784"
+            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
             BuildableName = "SwiftySound.framework"
-            BlueprintName = "SwiftySound iOS"
+            BlueprintName = "SwiftySound-tvOS"
             ReferencedContainer = "container:SwiftySound.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66256D991E6051EE00F5B784"
+            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
             BuildableName = "SwiftySound.framework"
-            BlueprintName = "SwiftySound iOS"
+            BlueprintName = "SwiftySound-tvOS"
             ReferencedContainer = "container:SwiftySound.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

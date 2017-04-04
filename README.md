@@ -6,6 +6,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 [![Build status](https://api.travis-ci.org/adamcichy/SwiftySound.svg?branch=master)](https://travis-ci.org/adamcichy/SwiftySound)
+[![codecov](https://codecov.io/gh/adamcichy/SwiftySound/branch/master/graph/badge.svg)](https://codecov.io/gh/adamcichy/SwiftySound)
 
 ## Overview
 Swifty Sound is a simple library that lets you deal with Swift sounds easily.
@@ -75,7 +76,7 @@ sound.play()
 - Xcode 8.0 or later
 - iOS 8.0 or later
 - tvOS 9.0 or later
-- OS X 10.10 or later
+- macOS 10.9 or later
 
 ## Installation
 ### Installation with CocoaPods
@@ -97,6 +98,25 @@ To install with carthage, follow the instruction on [Carthage](https://github.co
 ```
 github "adamcichy/SwiftySound"
 ```
+
+### Swift Package Manager
+
+The Swift Package Manager is a tool for managing the distribution of Swift code. Just add the url of this repo to your `Package.swift` file as a dependency:
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YourPackage",
+    dependencies: [
+        .Package(url: "https://github.com/adamcichy/SwiftySound.git",
+                 majorVersion: 0)
+    ]
+)
+```
+
+Then run `swift build` and wait for SPM to install SwiftySound as a dependency.
+
 ### Manual installation
 Drop the `Sound.swift` file into your project, link against `AVFoundation.framework` and you are ready to go.
 

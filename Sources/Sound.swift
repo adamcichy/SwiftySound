@@ -74,10 +74,10 @@ open class Sound {
         }
     }
 
+    #if os(iOS) || os(tvOS)
     public static var session: Session = AVAudioSession.sharedInstance()
 
     /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
-    #if os(iOS) || os(tvOS)
     public static var category: SoundCategory = {
         let defaultCategory = SoundCategory.ambient
         try? Sound.session.setCategory(defaultCategory.avFoundationCategory)
