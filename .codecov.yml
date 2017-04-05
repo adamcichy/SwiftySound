@@ -27,5 +27,5 @@ comment:
 
 ignore:
     - "*Tests*"
-    - "*macOS*"
+    - "*iOS*"
     - "*tvOS*"
