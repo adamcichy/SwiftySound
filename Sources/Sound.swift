@@ -27,19 +27,19 @@
 import Foundation
 import AVFoundation
 
-/// SoundCategory is a convenient wrapper for AVAudioSessions category constants.
 #if os(iOS) || os(tvOS)
+/// SoundCategory is a convenient wrapper for AVAudioSessions category constants.
     public enum SoundCategory {
 
-        /// Equivalent of AVAudioSessionCategoryAmbient
+        /// Equivalent of AVAudioSessionCategoryAmbient.
         case ambient
-        /// Equivalent of AVAudioSessionCategorySoloAmbient
+        /// Equivalent of AVAudioSessionCategorySoloAmbient.
         case soloAmbient
-        /// Equivalent of AVAudioSessionCategoryPlayback
+        /// Equivalent of AVAudioSessionCategoryPlayback.
         case playback
-        /// Equivalent of AVAudioSessionCategoryRecord
+        /// Equivalent of AVAudioSessionCategoryRecord.
         case record
-        /// Equivalent of AVAudioSessionCategoryPlayAndRecord
+        /// Equivalent of AVAudioSessionCategoryPlayAndRecord.
         case playAndRecord
 
         fileprivate var avFoundationCategory: String {
@@ -75,6 +75,7 @@ open class Sound {
     }
 
     #if os(iOS) || os(tvOS)
+    /// Sound session. The default value is the shared `AVAudioSession` session.
     public static var session: Session = AVAudioSession.sharedInstance()
 
     /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
@@ -109,13 +110,14 @@ open class Sound {
 
     private var counter = 0
 
+    /// The class that is used to create `Player` instances. Defaults to `AVAudioPlayer`.
     public static var playerClass: Player.Type = AVAudioPlayer.self
 
     // MARK: - Initialization
 
-    /// Create a sound object
+    /// Create a sound object.
     ///
-    /// - Parameter url: Sound file URL
+    /// - Parameter url: Sound file URL.
     public init?(url: URL) {
         #if os(iOS) || os(tvOS)
             _ = Sound.category
@@ -137,7 +139,7 @@ open class Sound {
 
     // MARK: - Main play method
 
-    /// Play the sound
+    /// Play the sound.
     ///
     /// - Parameter numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
@@ -153,7 +155,7 @@ open class Sound {
 
     // MARK: - Stop playing
 
-    /// Stop playing the sound
+    /// Stop playing the sound.
     public func stop() {
         for player in players {
             player.stop()
@@ -162,11 +164,11 @@ open class Sound {
 
     // MARK: - Convenience static methods
 
-    /// Play sound from a sound file
+    /// Play sound from a sound file.
     ///
     /// - Parameters:
-    ///   - file: Sound file name
-    ///   - fileExtension: Sound file extension
+    ///   - file: Sound file name.
+    ///   - fileExtension: Sound file extension.
     ///   - numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
     @discardableResult public static func play(file: String, fileExtension: String? = nil, numberOfLoops: Int = 0) -> Bool {
@@ -176,10 +178,10 @@ open class Sound {
         return false
     }
 
-    /// Play a sound from URL
+    /// Play a sound from URL.
     ///
     /// - Parameters:
-    ///   - url: Sound file URL
+    ///   - url: Sound file URL.
     ///   - numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
     @discardableResult public static func play(url: URL, numberOfLoops: Int = 0) -> Bool {
@@ -193,19 +195,19 @@ open class Sound {
         return sound?.play(numberOfLoops: numberOfLoops) ?? false
     }
 
-    /// Stop playing sound for given URL
+    /// Stop playing sound for given URL.
     ///
-    /// - Parameter url: Sound file URL
+    /// - Parameter url: Sound file URL.
     public static func stop(for url: URL) {
         let sound = sounds[url]
         sound?.stop()
     }
 
-    /// Stop playing sound for given sound file
+    /// Stop playing sound for given sound file.
     ///
     /// - Parameters:
-    ///   - file: Sound file name
-    ///   - fileExtension: Sound file extension
+    ///   - file: Sound file name.
+    ///   - fileExtension: Sound file extension.
     public static func stop(file: String, fileExtension: String? = nil) {
         if let url = url(for: file, fileExtension: fileExtension) {
             let sound = sounds[url]
@@ -213,7 +215,7 @@ open class Sound {
         }
     }
 
-    /// Stop playing all sounds
+    /// Stop playing all sounds.
     public static func stopAll() {
         for sound in sounds.values {
             sound.stop()
@@ -227,17 +229,34 @@ open class Sound {
 
 }
 
+/// Player protocol. It duplicates `AVAudioPlayer` methods.
 public protocol Player: class {
+
+    /// Play the sound.
+    ///
+    /// - Returns: true if the sound was played successfully. False otherwise.
     func play() -> Bool
+
+    /// Stop playing the sound.
     func stop()
+
+    /// Create a Player for sound url.
+    ///
+    /// - Parameter url: sound url.
     init(contentsOf url: URL) throws
+
+    /// Number of loops.
     var numberOfLoops: Int { get set }
 }
 
 extension AVAudioPlayer: Player {}
 
 #if os(iOS) || os(tvOS)
+/// Session protocol. It duplicates `setCategory` method of `AVAudioSession` class.
 public protocol Session: class {
+    /// Set category for session.
+    ///
+    /// - Parameter category: category.
     func setCategory(_ category: String) throws
 }
 
