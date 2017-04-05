@@ -611,7 +611,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftySound.SwiftySound-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySound;
 				PRODUCT_NAME = SwiftySound;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -633,7 +633,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftySound.SwiftySound-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySound;
 				PRODUCT_NAME = SwiftySound;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -681,7 +681,7 @@
 				INFOPLIST_FILE = Configs/SwiftySound.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftySound.SwiftySound-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySound;
 				PRODUCT_NAME = SwiftySound;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -703,7 +703,7 @@
 				INFOPLIST_FILE = Configs/SwiftySound.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftySound.SwiftySound-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySound;
 				PRODUCT_NAME = SwiftySound;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -729,7 +729,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftySound.SwiftySound-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySound;
 				PRODUCT_NAME = SwiftySound;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -752,7 +752,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftySound.SwiftySound-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamcichy.SwiftySound;
 				PRODUCT_NAME = SwiftySound;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;

@@ -1,8 +1,6 @@
 language: objective-c
 osx_image: xcode8.3
 script:
-    - xcodebuild clean build -project ./SwiftySound.xcodeproj -scheme SwiftySound-iOS CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' test
     - xcodebuild clean build -project ./SwiftySound.xcodeproj -scheme SwiftySound-macOS CODE_SIGNING_REQUIRED=NO test
-    - xcodebuild clean build -project ./SwiftySound.xcodeproj -scheme SwiftySound-tvOS CODE_SIGNING_REQUIRED=NO -destination 'platform=tvOS Simulator,OS=10.2,name=Apple TV 1080p' test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
