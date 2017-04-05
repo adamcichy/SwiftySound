@@ -151,6 +151,8 @@ class SwiftySoundTests: XCTestCase {
             XCTAssertFalse(result)
             let resultForStaticMethod = Sound.play(file: "dog.wav")
             XCTAssertFalse(resultForStaticMethod)
+            let resultForStaticMethodWithUrl = Sound.play(url: url)
+            XCTAssertFalse(resultForStaticMethodWithUrl)
             Sound.enabled = true
             let resultWhenSoundEnabled = sound.play()
             XCTAssert(resultWhenSoundEnabled)
