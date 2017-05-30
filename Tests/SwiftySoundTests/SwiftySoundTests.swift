@@ -14,6 +14,7 @@ extension String: Error {}
 
 final class MockPlayer: Player {
     var numberOfLoops: Int = 0
+    var duration: TimeInterval = 0
 
     required init(contentsOf url: URL) throws {
         let fm = FileManager.default

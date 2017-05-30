@@ -69,8 +69,8 @@ open class Sound {
     /// Number of AVAudioPlayer instances created for every sound. SwiftySound creates 5 players for every sound to make sure that it will be able to play the same sound more than once. If your app doesn't need this functionality, you can reduce the number of players to 1 and reduce memory usage. You can increase the number if your app plays the sound more than 5 times at the same time.
     public static var playersPerSound: Int = 5 {
         didSet {
-            Sound.stopAll()
-            Sound.sounds.removeAll()
+            stopAll()
+            sounds.removeAll()
         }
     }
 
@@ -81,11 +81,11 @@ open class Sound {
     /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
     public static var category: SoundCategory = {
         let defaultCategory = SoundCategory.ambient
-        try? Sound.session.setCategory(defaultCategory.avFoundationCategory)
+        try? session.setCategory(defaultCategory.avFoundationCategory)
         return defaultCategory
         }() {
         didSet {
-            try? Sound.session.setCategory(category.avFoundationCategory)
+            try? session.setCategory(category.avFoundationCategory)
         }
     }
     #endif
@@ -203,6 +203,13 @@ open class Sound {
         sound?.stop()
     }
 
+    /// Duration of the sound.
+    public var duration: TimeInterval {
+        get {
+            return self.players[counter].duration
+        }
+    }
+
     /// Stop playing sound for given sound file.
     ///
     /// - Parameters:
@@ -247,6 +254,9 @@ public protocol Player: class {
 
     /// Number of loops.
     var numberOfLoops: Int { get set }
+
+    /// Duration of the sound.
+    var duration: TimeInterval { get }
 }
 
 extension AVAudioPlayer: Player {}
