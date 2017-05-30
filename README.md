@@ -8,7 +8,8 @@
 [![SPM ready](https://img.shields.io/badge/SPM-ready-orange.svg)](https://swift.org/package-manager/)
 [![Build status](https://api.travis-ci.org/adamcichy/SwiftySound.svg?branch=master)](https://travis-ci.org/adamcichy/SwiftySound)
 [![codecov](https://codecov.io/gh/adamcichy/SwiftySound/branch/master/graph/badge.svg)](https://codecov.io/gh/adamcichy/SwiftySound)
-
+[![codebeat](https://codebeat.co/badges/b51bedad-3c13-4ef2-a632-5c4e3d4fa759)](https://codebeat.co/projects/github-com-adamcichy-swiftysound-master)
+[![Codacy](https://api.codacy.com/project/badge/Grade/048aad599e8549fa9f5d433f690dd796)](https://www.codacy.com/app/adamcichy/SwiftySound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=adamcichy/SwiftySound&amp;utm_campaign=Badge_Grade)
 ## Overview
 Swifty Sound is a simple library that lets you deal with Swift sounds easily.
 
