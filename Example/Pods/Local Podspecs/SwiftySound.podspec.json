@@ -1,7 +1,7 @@
 {
   "name": "SwiftySound",
-  "version": "0.3.0",
-  "summary": "Swifty Sound is a simple library that lets you play sounds with a single line of code.",
+  "version": "0.5.0",
+  "summary": "SwiftySound lets you play sounds with a single line of code.",
   "homepage": "https://github.com/adamcichy/SwiftySound",
   "license": {
     "type": "MIT",
@@ -18,7 +18,7 @@
   },
   "source": {
     "git": "https://github.com/adamcichy/SwiftySound.git",
-    "tag": "0.3.0"
+    "tag": "0.5.0"
   },
   "source_files": "Sources/**/*.swift",
   "frameworks": [

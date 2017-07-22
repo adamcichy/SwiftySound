@@ -1,8 +1,8 @@
-## Swifty Sound
+## SwiftySound
 
-[![CocoaPods](https://img.shields.io/cocoapods/l/SwiftySound.svg)](https://raw.githubusercontent.com/adamcichy/SwiftySound/master/LICENSE)
+[![CocoaPods License](https://img.shields.io/cocoapods/l/SwiftySound.svg)](https://raw.githubusercontent.com/adamcichy/SwiftySound/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/SwiftySound.svg)](https://cocoapods.org/pods/SwiftySound)
-[![CocoaPods](https://img.shields.io/cocoapods/p/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
+[![CocoaDocs](https://img.shields.io/cocoapods/p/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 [![SPM ready](https://img.shields.io/badge/SPM-ready-orange.svg)](https://swift.org/package-manager/)
@@ -10,8 +10,9 @@
 [![codecov](https://codecov.io/gh/adamcichy/SwiftySound/branch/master/graph/badge.svg)](https://codecov.io/gh/adamcichy/SwiftySound)
 [![codebeat](https://codebeat.co/badges/b51bedad-3c13-4ef2-a632-5c4e3d4fa759)](https://codebeat.co/projects/github-com-adamcichy-swiftysound-master)
 [![Codacy](https://api.codacy.com/project/badge/Grade/048aad599e8549fa9f5d433f690dd796)](https://www.codacy.com/app/adamcichy/SwiftySound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=adamcichy/SwiftySound&amp;utm_campaign=Badge_Grade)
+
 ## Overview
-Swifty Sound is a simple library that lets you deal with Swift sounds easily.
+SwiftySound is a simple library that lets you deal with Swift sounds easily.
 
 ##### Static methods
 
@@ -124,4 +125,4 @@ Drop the `Sound.swift` file into your project, link against `AVFoundation.framew
 
 ## Licenses
 
-Swifty Sound is licensed under the [MIT License](https://raw.githubusercontent.com/adamcichy/SwiftySound/master/LICENSE).
+SwiftySound is licensed under the [MIT License](https://raw.githubusercontent.com/adamcichy/SwiftySound/master/LICENSE).

@@ -134,7 +134,6 @@ open class Sound {
             return nil
         }
         players = myPlayers
-        Sound.sounds[url] = self
     }
 
     // MARK: - Main play method
@@ -191,6 +190,7 @@ open class Sound {
         var sound = sounds[url]
         if sound == nil {
             sound = Sound(url: url)
+            sounds[url] = sound
         }
         return sound?.play(numberOfLoops: numberOfLoops) ?? false
     }
@@ -210,6 +210,19 @@ open class Sound {
         }
     }
 
+    /// Sound volume.
+    /// A value in the range 0.0 to 1.0, with 0.0 representing the minimum volume and 1.0 representing the maximum volume.
+    public var volume: Float {
+        get {
+            return players[counter].volume
+        }
+        set {
+            for player in players {
+                player.volume = newValue
+            }
+        }
+    }
+    
     /// Stop playing sound for given sound file.
     ///
     /// - Parameters:
@@ -233,7 +246,7 @@ open class Sound {
     private static func url(for file: String, fileExtension: String? = nil) -> URL? {
         return Bundle.main.url(forResource: file, withExtension: fileExtension)
     }
-
+    
 }
 
 /// Player protocol. It duplicates `AVAudioPlayer` methods.
@@ -257,6 +270,9 @@ public protocol Player: class {
 
     /// Duration of the sound.
     var duration: TimeInterval { get }
+    
+    /// Sound volume.
+    var volume: Float { get set }
 }
 
 extension AVAudioPlayer: Player {}

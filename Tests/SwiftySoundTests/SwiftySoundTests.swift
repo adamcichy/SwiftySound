@@ -13,8 +13,10 @@ import SwiftySound
 extension String: Error {}
 
 final class MockPlayer: Player {
+
     var numberOfLoops: Int = 0
-    var duration: TimeInterval = 0
+    var duration: TimeInterval = 1
+    var volume: Float = 1
 
     required init(contentsOf url: URL) throws {
         let fm = FileManager.default
@@ -142,6 +144,17 @@ class SwiftySoundTests: XCTestCase {
             Sound.stop(for: url)
             Sound.stopAll()
             XCTAssert(true)
+        }
+    }
+    
+    func testVolume() {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
+            sound.volume = 0.5
+            XCTAssertEqual(sound.volume, 0.5)
+            sound.volume = 0.0
+            XCTAssertEqual(sound.volume, 0.0)
+            sound.volume = 1.0
+            XCTAssertEqual(sound.volume, 1.0)
         }
     }
 
