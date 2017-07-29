@@ -2,8 +2,7 @@
 
 [![CocoaPods License](https://img.shields.io/cocoapods/l/SwiftySound.svg)](https://raw.githubusercontent.com/adamcichy/SwiftySound/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/SwiftySound.svg)](https://cocoapods.org/pods/SwiftySound)
-[![CocoaDocs](https://img.shields.io/cocoapods/p/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
-[![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftySound.svg)](http://cocoadocs.org/docsets/SwiftySound/)
+[![CocoaPods Platforms](https://img.shields.io/cocoapods/p/SwiftySound.svg)](https://cocoapods.org/pods/SwiftySound)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 [![SPM ready](https://img.shields.io/badge/SPM-ready-orange.svg)](https://swift.org/package-manager/)
 [![Build status](https://api.travis-ci.org/adamcichy/SwiftySound.svg?branch=master)](https://travis-ci.org/adamcichy/SwiftySound)
@@ -59,19 +58,47 @@ Sound.category = .ambient
 ```
 This changes the category of the underlying shared `AVAudioSession` instance. The default value is `SoundCategory.ambient`. Due to `AVAudioSession` architecture, this property is not available on macOS.
 
-##### Creating instances of `Sound` class
+##### Creating instances of *Sound* class
 
 You can also create an instance of a Sound class and store it somewhere in your app.
+
 ```swift
-let sound = Sound(url: fileURL)
-sound.play()
+let mySound = Sound(url: fileURL)
+mySound.play()
 ```
+
+Creating an instance has more benefits like the ability to adjust the volume and playback callbacks.
+
+##### Change the volume
+
+You can change the volume of each *Sound* instance.
+
+```swift
+mySound.volume = 0.5
+```
+The value of *volume* property should be between 0.0 and 1.0, where 1.0 is the maximum.
+
+##### Callbacks
+
+You can pass a callback to the `play` method. It will be played after the sound finished playing. For looped sounds, the callback will be called once after the last loop has been played.
+
+```swift
+mySound.play { completed in
+    print("completed: \(completed)")
+}
+```
+
+<aside class="warning">
+The callback is not called if the sound was stopped, interupted or in case of a playback error.
+</aside>
 
 ## Features
 - [x] Playing single sounds
 - [x] Loops
 - [x] Infinite loops
 - [x] Playing the same sound multiple times simultaneously
+- [x] Adjusting sound volume
+- [x] Callbacks
 - [x] Global static variable to enable/disable all sounds
 
 ## Requirements

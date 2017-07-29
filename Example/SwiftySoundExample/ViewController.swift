@@ -19,14 +19,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelVolume: UILabel!
     @IBOutlet weak var sliderVolume: UISlider!
     @IBOutlet weak var buttonDogWithVolume: UIButton!
-    
+
     private var dogSound: Sound?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         switchSoundEnabled.isOn = Sound.enabled
-        if let url = Bundle.main.url(forResource: "dog", withExtension: "wav") {
-            dogSound = Sound(url: url)
+        if let dogUrl = Bundle.main.url(forResource: "dog", withExtension: "wav") {
+            dogSound = Sound(url: dogUrl)
         }
     }
 
@@ -47,7 +47,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func buttonDogWithVolumeClicked(_ sender: Any) {
-        dogSound?.play()
+        dogSound?.play { completed in
+            print("completed: \(completed)")
+        }
     }
 
     @IBAction func buttonStopClicked(_ sender: Any) {
@@ -57,7 +59,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func switchSoundEnabledValueChanged(_ sender: UISwitch) {
         Sound.enabled = sender.isOn
     }
-    
+
     @IBAction func sliderVolumeValueChanged(_ sender: UISlider) {
         dogSound?.volume = sender.value
         labelVolume.text = "volume: \(String(format: "%0.0f", (sender.value * 100)))%"

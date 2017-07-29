@@ -115,6 +115,7 @@
 				661933F11E5CD6A50042D25E /* Resources */,
 				9448886DF868C0AFE4BBC8BA /* [CP] Embed Pods Frameworks */,
 				DF2BAABE04957F4C290BAE3E /* [CP] Copy Pods Resources */,
+				DC2AE109D7377C9E938BEEB1 /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -189,6 +190,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DC2AE109D7377C9E938BEEB1 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\n  tailor ..\nfi";
 		};
 		DF2BAABE04957F4C290BAE3E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

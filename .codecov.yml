@@ -1,3 +1,4 @@
 ignore:
     - "**/*Tests.swift"
+    - "Tests/LinuxMain.swift"
 

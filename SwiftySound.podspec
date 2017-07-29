@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SwiftySound'
-  s.version      = '0.5.0'
+  s.version      = '0.6.0'
   s.summary      = 'SwiftySound lets you play sounds with a single line of code.'
 
   s.homepage     = 'https://github.com/adamcichy/SwiftySound'
