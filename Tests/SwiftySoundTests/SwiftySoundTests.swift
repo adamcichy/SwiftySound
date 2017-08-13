@@ -3,7 +3,7 @@
 //  Moonlight Apps
 //
 //  Created by Adam Cichy on 04/04/2017.
-//  Copyright © 2017 Moonlight Apps. All rights reserved.
+//  Copyright (c) 2017 Moonlight Apps. All rights reserved.
 //
 
 import Foundation
@@ -26,11 +26,15 @@ final class MockPlayer: Player {
         }
     }
 
+    func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
+        completion?(true)
+        return true
+    }
+
     func stop() {
     }
 
-    func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
-        completion?(true)
+    func prepare() -> Bool {
         return true
     }
 
@@ -48,6 +52,7 @@ class SwiftySoundTests: XCTestCase {
         Sound.enabled = true
         if let url = bundle.url(forResource: "cat", withExtension: "wav") {
             catSound = Sound(url: url)
+            catSound?.prepare()
         }
     }
 
@@ -178,6 +183,16 @@ class SwiftySoundTests: XCTestCase {
             XCTAssert(resultWhenSoundEnabled)
         }
         Sound.enabled = true
+    }
+
+    func testPrepare() {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
+            let prepareResult = sound.prepare()
+            XCTAssert(prepareResult)
+            let playResult = sound.play()
+            XCTAssert(playResult)
+            sound.stop()
+        }
     }
 
 }
