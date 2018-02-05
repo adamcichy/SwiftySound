@@ -102,8 +102,8 @@ The callback is not called if the sound was stopped, interupted or in case of a 
 - [x] Global static variable to enable/disable all sounds
 
 ## Requirements
-- Swift 3
-- Xcode 8.0 or later
+- Swift 4
+- Xcode 9.0 or later
 - iOS 8.0 or later
 - tvOS 9.0 or later
 - macOS 10.9 or later
