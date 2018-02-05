@@ -34,7 +34,7 @@ final class MockPlayer: Player {
     func stop() {
     }
 
-    func prepare() -> Bool {
+    func prepareToPlay() -> Bool {
         return true
     }
 

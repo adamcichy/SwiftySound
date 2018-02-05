@@ -180,7 +180,7 @@ open class Sound {
     ///
     /// - Returns: True if the sound has been prepared, false in case of error
     @discardableResult public func prepare() -> Bool {
-        return players[counter].prepare()
+        return players[counter].prepareToPlay()
     }
 
     // MARK: - Convenience static methods
@@ -284,7 +284,7 @@ public protocol Player: class {
     func stop()
 
     /// Prepare the sound.
-    func prepare() -> Bool
+    func prepareToPlay() -> Bool
 
     /// Create a Player for sound url.
     ///
@@ -303,10 +303,6 @@ fileprivate var associatedCallbackKey = "com.moonlightapps.SwiftySound.associate
 public typealias PlayerCompletion = ((Bool) -> ())
 
 extension AVAudioPlayer: Player, AVAudioPlayerDelegate {
-
-    public func prepare() -> Bool {
-        return prepareToPlay()
-    }
 
     public func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
         if let cmpl = completion {
