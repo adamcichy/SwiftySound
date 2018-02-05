@@ -17,4 +17,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/**/*.swift'
   s.frameworks   = 'Foundation', 'AVFoundation'
   
+  s.swift_version = '4.0'
+  
 end
