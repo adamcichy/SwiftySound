@@ -119,9 +119,9 @@ open class Sound {
     ///
     /// - Parameter url: Sound file URL.
     public convenience init?(url: URL) {
-        let constructor: ((Any) -> Player?) = { (URL) -> Player? in
+        let constructor: ((Any) -> Player?) = { (url) -> Player? in
             do {
-                let player = try Sound.playerClass.init(contentsOf: url)
+                let player = try Sound.playerClass.init(contentsOf: url as! URL)
                 return player
             } catch let error {
                 print("SwiftySound initialization error: \(error)")
@@ -130,14 +130,14 @@ open class Sound {
         }
         self.init(object: url, constructor: constructor)
     }
-    
+
     /// Create a sound object.
     ///
     /// - Parameter data: Sound file Data.
     public convenience init?(data: Data) {
-        let constructor: ((Any) -> Player?) = { (Data) -> Player? in
+        let constructor: ((Any) -> Player?) = { (data) -> Player? in
             do {
-                let player = try Sound.playerClass.init(data: data)
+                let player = try Sound.playerClass.init(data: data as! Data)
                 return player
             } catch let error {
                 print("SwiftySound initialization error: \(error)")
