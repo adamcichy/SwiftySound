@@ -118,7 +118,47 @@ open class Sound {
     /// Create a sound object.
     ///
     /// - Parameter url: Sound file URL.
-    public init?(url: URL) {
+    public convenience init?(url: URL) {
+        let constructor: ((Any) -> Player?) = { (URL) -> Player? in
+            do {
+                let player = try Sound.playerClass.init(contentsOf: url)
+                return player
+            } catch let error {
+                print("SwiftySound initialization error: \(error)")
+                return nil
+            }
+        }
+        self.init(object: url, constructor: constructor)
+    }
+    
+    /// Create a sound object.
+    ///
+    /// - Parameter data: Sound file Data.
+    public convenience init?(data: Data) {
+        let constructor: ((Any) -> Player?) = { (Data) -> Player? in
+            do {
+                let player = try Sound.playerClass.init(data: data)
+                return player
+            } catch let error {
+                print("SwiftySound initialization error: \(error)")
+                return nil
+            }
+        }
+        self.init(object: data, constructor: constructor)
+    }
+    
+    /// Create a sound object.
+    ///
+    /// - Parameter name: Sound name in asset catalog.
+    @available(iOS 9.0, *)
+    public convenience init?(name: String) {
+        guard let asset = NSDataAsset(name: name) else {
+            return nil
+        }
+        self.init(data: asset.data)
+    }
+    
+    private init?(object: Any, constructor: ((Any) -> Player?)) {
         #if os(iOS) || os(tvOS)
             _ = Sound.category
         #endif
@@ -126,11 +166,8 @@ open class Sound {
         var myPlayers: [Player] = []
         myPlayers.reserveCapacity(playersPerSound)
         for _ in 0..<playersPerSound {
-            do {
-                let player = try Sound.playerClass.init(contentsOf: url)
+            if let player = constructor(object) {
                 myPlayers.append(player)
-            } catch let error {
-                print("SwiftySound initialization error: \(error)")
             }
         }
         if myPlayers.count == 0 {
@@ -290,6 +327,11 @@ public protocol Player: class {
     ///
     /// - Parameter url: sound url.
     init(contentsOf url: URL) throws
+    
+    /// Create a Player for sound url.
+    ///
+    /// - Parameter data: sound data.
+    init(data: Data) throws
 
     /// Duration of the sound.
     var duration: TimeInterval { get }
