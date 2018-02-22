@@ -89,7 +89,7 @@ mySound.play { completed in
 ```
 
 <aside class="warning">
-The callback is not called if the sound was stopped, interupted or in case of a playback error.
+The callback is not called if the sound was stopped, interrupted or in case of a playback error.
 </aside>
 
 ## Features
