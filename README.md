@@ -30,7 +30,7 @@ Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: 2)
 ```
 The above will play the sound three times.
 
-Specify a negative number of loops to play the sound continously in an intinite loop:
+Specify a negative number of loops to play the sound continously in an infinite loop:
 
 ```swift
 Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: -1)
@@ -111,7 +111,7 @@ The callback is not called if the sound was stopped, interrupted or in case of a
 ## Installation
 ### Installation with CocoaPods
 
-[CocoaPods](http://cocoapods.org/) is a dependency manager which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Get Started](http://cocoapods.org/#get_started) section for more details.
+[CocoaPods](http://cocoapods.org/) is a dependency manager which automates and simplifies the process of using third-party libraries in your projects. See the [Get Started](http://cocoapods.org/#get_started) section for more details.
 
 #### Podfile
 ```ruby
