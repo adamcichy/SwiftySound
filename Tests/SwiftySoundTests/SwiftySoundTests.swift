@@ -16,6 +16,7 @@ final class MockPlayer: Player {
 
     var duration: TimeInterval = 1
     var volume: Float = 1
+    var isPlaying: Bool = false
 
     required init(contentsOf url: URL) throws {
         let fm = FileManager.default
@@ -27,32 +28,47 @@ final class MockPlayer: Player {
     }
 
     func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
+        isPlaying = true
         completion?(true)
         return true
     }
 
     func stop() {
+        isPlaying = false
     }
 
     func prepareToPlay() -> Bool {
         return true
+    }
+    
+    func pause() {
+        isPlaying = false
+    }
+    
+    func resume() {
+        isPlaying = true
     }
 
 }
 
 class SwiftySoundTests: XCTestCase {
 
-    var catSound: Sound?
+    var catSound: Sound!
+    var dogSound: Sound!
 
-    let bundle = Bundle.main
+    let bundle = Bundle(for: SwiftySoundTests.self)
 
     override func setUp() {
         super.setUp()
+        Sound.soundsBundle = bundle
         Sound.playerClass = MockPlayer.self
         Sound.enabled = true
         if let url = bundle.url(forResource: "cat", withExtension: "wav") {
             catSound = Sound(url: url)
             catSound?.prepare()
+        }
+        if let url = bundle.url(forResource: "dog", withExtension: "wav") {
+            dogSound = Sound(url: url)
         }
     }
 
@@ -147,8 +163,9 @@ class SwiftySoundTests: XCTestCase {
             sound.stop()
             Sound.play(url: url, numberOfLoops: -1)
             Sound.stop(for: url)
+            Sound.stop(file: "dog.wav")
             Sound.stopAll()
-            XCTAssert(true)
+            XCTAssertFalse(sound.playing)
         }
     }
 
@@ -164,35 +181,50 @@ class SwiftySoundTests: XCTestCase {
     }
 
     func testDuration() {
-        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
-            XCTAssert(sound.duration > 0)
-        }
+        XCTAssert(dogSound.duration > 0)
     }
 
     func testNotEnabledPlayback() {
         Sound.enabled = false
-        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
-            let result = sound.play()
-            XCTAssertFalse(result)
-            let resultForStaticMethod = Sound.play(file: "dog.wav")
-            XCTAssertFalse(resultForStaticMethod)
+        let result = dogSound.play()
+        XCTAssertFalse(result)
+        let resultForStaticMethod = Sound.play(file: "dog.wav")
+        XCTAssertFalse(resultForStaticMethod)
+        if let url = bundle.url(forResource: "dog", withExtension: "wav") {
             let resultForStaticMethodWithUrl = Sound.play(url: url)
             XCTAssertFalse(resultForStaticMethodWithUrl)
-            Sound.enabled = true
-            let resultWhenSoundEnabled = sound.play()
-            XCTAssert(resultWhenSoundEnabled)
         }
+        Sound.enabled = true
+        let resultWhenSoundEnabled = dogSound.play()
+        XCTAssert(resultWhenSoundEnabled)
         Sound.enabled = true
     }
 
     func testPrepare() {
-        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
-            let prepareResult = sound.prepare()
-            XCTAssert(prepareResult)
-            let playResult = sound.play()
-            XCTAssert(playResult)
-            sound.stop()
-        }
+        let prepareResult = dogSound.prepare()
+        XCTAssert(prepareResult)
+        let playResult = dogSound.play()
+        XCTAssert(playResult)
+        dogSound.stop()
+    }
+    
+    func testSoundState() {
+        dogSound.play()
+        XCTAssert(dogSound.playing)
+        dogSound.pause()
+        XCTAssert(dogSound.paused)
+        XCTAssertFalse(dogSound.playing)
+        dogSound.resume()
+        XCTAssertFalse(dogSound.paused)
+        XCTAssert(dogSound.playing)
+    }
+    
+    func testResume() {
+        XCTAssertFalse(dogSound.resume())
+        dogSound.play()
+        XCTAssertFalse(dogSound.resume())
+        dogSound.pause()
+        XCTAssert(dogSound.resume())
     }
 
 }

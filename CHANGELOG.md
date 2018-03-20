@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.0] - 2018-03-20
+### Added
+- Pause and resume methods.
+- "playing" and "paused" properties.
+- Swift 4 support.
+
+### Changed
+- Xcode 9 and Swift 4 are now required. For Swift 3 and Xcode 8 support, please use SwiftySound 0.7.0.
+
 ## [0.7.0] - 2017-08-13
 ### Added
 - Sound prepare method.
@@ -50,6 +59,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial release.
 
+[1.0.0]: https://github.com/adamcichy/SwiftySound/compare/0.7.0...1.0.0
 [0.7.0]: https://github.com/adamcichy/SwiftySound/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/adamcichy/SwiftySound/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/adamcichy/SwiftySound/compare/0.4.0...0.5.0

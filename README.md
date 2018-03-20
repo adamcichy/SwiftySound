@@ -97,6 +97,8 @@ The callback is not called if the sound was stopped, interrupted or in case of a
 - [x] Loops
 - [x] Infinite loops
 - [x] Playing the same sound multiple times simultaneously
+- [x] Stopping all sounds with a global static method
+- [x] Ability to pause and resume
 - [x] Adjusting sound volume
 - [x] Callbacks
 - [x] Global static variable to enable/disable all sounds
@@ -107,6 +109,8 @@ The callback is not called if the sound was stopped, interrupted or in case of a
 - iOS 8.0 or later
 - tvOS 9.0 or later
 - macOS 10.9 or later
+
+For Xcode 8 and Swift 3 support, please use SwiftySound version `0.7.0`.
 
 ## Installation
 ### Installation with CocoaPods
