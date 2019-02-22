@@ -46,15 +46,15 @@ import AVFoundation
             get {
                 switch self {
                 case .ambient:
-                    return AVAudioSessionCategoryAmbient
+                    return AVAudioSession.Category.ambient.rawValue
                 case .soloAmbient:
-                    return AVAudioSessionCategorySoloAmbient
+                    return AVAudioSession.Category.soloAmbient.rawValue
                 case .playback:
-                    return AVAudioSessionCategoryPlayback
+                    return AVAudioSession.Category.playback.rawValue
                 case .record:
-                    return AVAudioSessionCategoryRecord
+                    return AVAudioSession.Category.record.rawValue
                 case .playAndRecord:
-                    return AVAudioSessionCategoryPlayAndRecord
+                    return AVAudioSession.Category.playAndRecord.rawValue
                 }
             }
         }
@@ -379,5 +379,9 @@ public protocol Session: class {
     func setCategory(_ category: String) throws
 }
 
-extension AVAudioSession: Session {}
+extension AVAudioSession: Session {
+    public func setCategory(_ category: String) throws {
+        try setCategory(AVAudioSession.Category(rawValue: category), mode: .default, options: [])
+    }
+}
 #endif
