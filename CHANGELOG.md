@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.0] -
+## [1.1.0] - 2019-04-28
+### Added
+- Swift 5 support.
 ### Changed
-- Swift 5 support
+- Xcode 10.2 and Swift 5 are now required. For Swift 4 and Xcode 9 support, please use SwiftySound 1.0.0.
 
 ## [1.0.0] - 2018-03-20
 ### Added
@@ -63,6 +65,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial release.
 
+[1.1.0]: https://github.com/adamcichy/SwiftySound/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/adamcichy/SwiftySound/compare/0.7.0...1.0.0
 [0.7.0]: https://github.com/adamcichy/SwiftySound/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/adamcichy/SwiftySound/compare/0.5.0...0.6.0

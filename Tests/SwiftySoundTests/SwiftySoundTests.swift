@@ -40,11 +40,11 @@ final class MockPlayer: Player {
     func prepareToPlay() -> Bool {
         return true
     }
-    
+
     func pause() {
         isPlaying = false
     }
-    
+
     func resume() {
         isPlaying = true
     }
@@ -207,7 +207,7 @@ class SwiftySoundTests: XCTestCase {
         XCTAssert(playResult)
         dogSound.stop()
     }
-    
+
     func testSoundState() {
         dogSound.play()
         XCTAssert(dogSound.playing)
@@ -218,7 +218,7 @@ class SwiftySoundTests: XCTestCase {
         XCTAssertFalse(dogSound.paused)
         XCTAssert(dogSound.playing)
     }
-    
+
     func testResume() {
         XCTAssertFalse(dogSound.resume())
         dogSound.play()

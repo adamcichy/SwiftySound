@@ -104,13 +104,14 @@ The callback is not called if the sound was stopped, interrupted or in case of a
 - [x] Global static variable to enable/disable all sounds
 
 ## Requirements
-- Swift 4
-- Xcode 9.0 or later
+- Swift 5
+- Xcode 10.2 or later
 - iOS 8.0 or later
 - tvOS 9.0 or later
 - macOS 10.9 or later
 
 For Xcode 8 and Swift 3 support, please use SwiftySound version `0.7.0`.
+For Xcode 9 and Swift 4 support, please use SwiftySound version `1.0.0`.
 
 ## Installation
 ### Installation with CocoaPods
