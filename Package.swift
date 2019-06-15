@@ -4,6 +4,6 @@ import PackageDescription
 let package = Package(
     name: "SwiftySound",
     products: [
-        .library(name: "SwiftySound", targets: ["SwiftySound"])
+        .library(name: "SwiftySound", targets: ["SwiftySound-iOS"])
     ]
 )
