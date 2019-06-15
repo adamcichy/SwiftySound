@@ -7,6 +7,6 @@ let package = Package(
         .library(name: "SwiftySound", targets: ["SwiftySound-iOS"])
     ],
     targets: [
-        .target(name: "SwiftySound-iOS", dependencies: [])
+        .target(name: "SwiftySound-iOS", dependencies: [], path: "Sources")
     ]
 )
