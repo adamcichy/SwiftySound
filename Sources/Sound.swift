@@ -276,6 +276,14 @@ open class Sound {
         }
     }
 
+    /// Current time.
+    /// If the sound is playing, currentTime is the offset of the current playback position, measured in seconds from the start of the sound.
+    public var currentTime: TimeInterval {
+        get {
+            return players[counter].currentTime
+        }
+    }
+
     /// Stop playing sound for given sound file.
     ///
     /// - Parameters:
@@ -331,6 +339,9 @@ public protocol Player: class {
     /// Duration of the sound.
     var duration: TimeInterval { get }
 
+    /// Current time.
+    var currentTime: TimeInterval { get set }
+    
     /// Sound volume.
     var volume: Float { get set }
 

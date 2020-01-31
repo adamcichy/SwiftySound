@@ -15,6 +15,7 @@ extension String: Error {}
 final class MockPlayer: Player {
 
     var duration: TimeInterval = 1
+    var currentTime: TimeInterval = 1
     var volume: Float = 1
     var isPlaying: Bool = false
 
@@ -184,6 +185,10 @@ class SwiftySoundTests: XCTestCase {
         XCTAssert(dogSound.duration > 0)
     }
 
+    func testCurrentTime() {
+        XCTAssert(dogSound.currentTime > 0)
+    }
+    
     func testNotEnabledPlayback() {
         Sound.enabled = false
         let result = dogSound.play()
