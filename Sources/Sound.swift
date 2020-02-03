@@ -275,6 +275,14 @@ open class Sound {
             }
         }
     }
+    
+    /// Set volume with duration i.e. fade to a new volume over a duration
+    @available(iOS 10.0, *)
+    public func setVolume(_ volume: Float, fadeDuration duration: TimeInterval) {
+        for player in players {
+            player.setVolume(volume, fadeDuration: duration)
+        }
+    }
 
     /// Current time.
     /// If the sound is playing, currentTime is the offset of the current playback position, measured in seconds from the start of the sound.
@@ -327,6 +335,10 @@ public protocol Player: class {
 
     /// Resume playing.
     func resume()
+    
+    /// Set volume with duration i.e. fade to a new volume over a duration
+    @available(iOS 10.0, *)
+    func setVolume(_ volume: Float, fadeDuration duration: TimeInterval)
 
     /// Prepare the sound.
     func prepareToPlay() -> Bool
