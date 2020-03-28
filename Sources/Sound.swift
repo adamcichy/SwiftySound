@@ -131,6 +131,7 @@ open class Sound {
         for _ in 0..<playersPerSound {
             do {
                 let player = try Sound.playerClass.init(contentsOf: url)
+                player.enableRate = true
                 myPlayers.append(player)
             } catch {
                 print("SwiftySound initialization error: \(error)")
@@ -276,6 +277,32 @@ open class Sound {
         }
     }
 
+    /// Sound rate.
+    /// This property’s default value of 1.0 provides normal playback rate. The available range is from 0.5 for half-speed playback through 2.0 for double-speed playback.
+    public var rate: Float {
+        get {
+            return players[counter].rate
+        }
+        set {
+            for player in players {
+                player.rate = newValue
+            }
+        }
+    }
+
+    /// Sound enableRate.
+    /// A Boolean value that specifies whether playback rate adjustment is enabled for an audio player.
+    public var enableRate: Bool {
+        get {
+            return players[counter].enableRate
+        }
+        set {
+            for player in players {
+                player.enableRate = newValue
+            }
+        }
+    }
+
     /// Stop playing sound for given sound file.
     ///
     /// - Parameters:
@@ -336,6 +363,12 @@ public protocol Player: class {
 
     /// Indicates if the player is currently playing.
     var isPlaying: Bool { get }
+
+    /// Sound rate.
+    var rate: Float { get set }
+
+    /// A Boolean value that specifies whether playback rate adjustment is enabled for an audio player.
+    var enableRate: Bool { get set }
 }
 
 fileprivate var associatedCallbackKey = "com.moonlightapps.SwiftySound.associatedCallbackKey"
