@@ -337,7 +337,7 @@ public protocol Player: class {
     func resume()
     
     /// Set volume with duration i.e. fade to a new volume over a duration
-    @available(iOS 10.0, *)
+    @available(iOS 10.0, tvOS 10.0, macOS 10.12, *)
     func setVolume(_ volume: Float, fadeDuration duration: TimeInterval)
 
     /// Prepare the sound.
