@@ -277,7 +277,7 @@ open class Sound {
     }
     
     /// Set volume with duration i.e. fade to a new volume over a duration
-    @available(iOS 10.0, *)
+    @available(iOS 10.0, tvOS 10.0, macOS 10.12, *)
     public func setVolume(_ volume: Float, fadeDuration duration: TimeInterval) {
         for player in players {
             player.setVolume(volume, fadeDuration: duration)
