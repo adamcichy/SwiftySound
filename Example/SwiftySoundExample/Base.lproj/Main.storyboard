@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,23 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-Hi-D2e">
-                                <rect key="frame" x="60" y="344" width="256" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-Hi-D2e">
+                                <rect key="frame" x="60" y="348" width="256" height="30"/>
                                 <state key="normal" title="play 'dog' sound"/>
                                 <connections>
                                     <action selector="buttonDogClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbq-LL-ipZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cat-pQ-dau">
-                                <rect key="frame" x="60" y="410" width="256" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cat-pQ-dau">
+                                <rect key="frame" x="60" y="414" width="256" height="30"/>
                                 <state key="normal" title="play 'cat' sound"/>
                                 <connections>
                                     <action selector="buttonCatClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pP-2o-nc6"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="svs-i9-dp5">
-                                <rect key="frame" x="137" y="239" width="101" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="137" y="239" width="101" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
@@ -48,26 +46,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="specify a negative number for infinite loop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJa-49-ADP">
-                                <rect key="frame" x="26" y="283" width="322" height="12"/>
+                                <rect key="frame" x="26" y="287" width="322" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-9f-Lhh">
-                                <rect key="frame" x="56" y="569" width="263" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-9f-Lhh">
+                                <rect key="frame" x="56" y="573" width="263" height="30"/>
                                 <state key="normal" title="play 'dog' sound with selected volume"/>
                                 <connections>
                                     <action selector="buttonDogWithVolumeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sil-4Q-I6v"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-CD-MHX">
-                                <rect key="frame" x="128" y="534" width="118" height="31"/>
+                                <rect key="frame" x="128" y="538" width="118" height="31"/>
                                 <connections>
                                     <action selector="sliderVolumeValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HMh-12-r1v"/>
                                 </connections>
                             </slider>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJz-lZ-q5h">
-                                <rect key="frame" x="17" y="469" width="342" height="2"/>
+                                <rect key="frame" x="17" y="473" width="342" height="2"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="fvv-y0-hOD"/>
@@ -98,12 +96,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="volume: 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWO-Xz-cSi">
-                                <rect key="frame" x="131" y="503" width="113" height="21"/>
+                                <rect key="frame" x="131" y="507" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8m-Pz-eMK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8m-Pz-eMK">
                                 <rect key="frame" x="145" y="748" width="85" height="30"/>
                                 <state key="normal" title="stop playing"/>
                                 <connections>
@@ -111,7 +109,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="9zR-aj-slH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="svs-i9-dp5" firstAttribute="top" secondItem="p3T-Pr-V5g" secondAttribute="bottom" constant="17" id="1u6-ba-uKO"/>
                             <constraint firstItem="9zR-aj-slH" firstAttribute="trailing" secondItem="Ddk-aC-UUK" secondAttribute="trailing" constant="16" id="6ON-9X-zVx"/>
@@ -163,7 +162,6 @@
                             <constraint firstItem="Cat-pQ-dau" firstAttribute="leading" secondItem="9zR-aj-slH" secondAttribute="leading" constant="60" id="uMv-1Y-0GG"/>
                             <constraint firstItem="9zR-aj-slH" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="dWO-Xz-cSi" secondAttribute="trailing" constant="137" id="y27-qM-qzk"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9zR-aj-slH"/>
                     </view>
                     <connections>
                         <outlet property="buttonCat" destination="Cat-pQ-dau" id="r3w-Pu-otV"/>
@@ -182,4 +180,9 @@
             <point key="canvasLocation" x="116" y="123.39901477832512"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
