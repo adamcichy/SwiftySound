@@ -1,4 +1,5 @@
-platform :ios, '8.0'
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+platform :ios, '9.0'
 use_frameworks!
 
 target 'SwiftySoundExample' do
