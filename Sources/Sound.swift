@@ -256,7 +256,7 @@ open class Sound {
         sound?.stop()
     }
     
-    /// Clear all cached sound if need. For low memory issue.
+    /// Clear all cached sound -> close all opening audio file -> avoid Domain=NSOSStatusErrorDomain Code=-42 error.
     public static func clearCache() {
         stopAll()
         sounds.removeAll()
