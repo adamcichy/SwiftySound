@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         switchSoundEnabled.isOn = Sound.enabled
         if let dogUrl = Bundle.main.url(forResource: "dog", withExtension: "wav") {
-            dogSound = Sound(url: dogUrl)
+            dogSound = Sound(url: dogUrl, playersPerSound: 1)
         }
         if let pianoUrl = Bundle.main.url(forResource: "piano", withExtension: "wav") {
             backgroundSound = Sound(url: pianoUrl)
@@ -46,11 +46,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Actions
     @IBAction func buttonDogClicked(_ sender: Any) {
-        Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: numberOfLoops())
+        let numberOfLoops = self.numberOfLoops()
+        let numberOfPlayers = max(numberOfLoops + 1, 1)
+        Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: numberOfLoops, numberOfPlayers: numberOfPlayers)
     }
 
     @IBAction func buttonCatClicked(_ sender: Any) {
-        Sound.play(file: "cat", fileExtension: "wav", numberOfLoops: numberOfLoops())
+        let numberOfLoops = self.numberOfLoops()
+        let numberOfPlayers = max(numberOfLoops + 1, 1)
+        Sound.play(file: "cat", fileExtension: "wav", numberOfLoops: numberOfLoops, numberOfPlayers: numberOfPlayers)
     }
 
     @IBAction func buttonDogWithVolumeClicked(_ sender: Any) {
