@@ -74,6 +74,9 @@ open class Sound {
         }
     }
 
+    /// Number of AVAudioPlayer instances created for the sound
+    public var playersPerSound: Int { players.count }
+
     #if os(iOS) || os(tvOS)
     /// Sound session. The default value is the shared `AVAudioSession` session.
     public static var session: Session = AVAudioSession.sharedInstance()
@@ -120,12 +123,14 @@ open class Sound {
 
     /// Create a sound object.
     ///
-    /// - Parameter url: Sound file URL.
-    public init?(url: URL) {
+    /// - Parameters:
+    ///   - url: Sound file URL.
+    ///   - numberOfPlayers: Number of AVAudioPlayer instances for sound.
+    public init?(url: URL, numberOfPlayers: Int? = nil) {
         #if os(iOS) || os(tvOS)
             _ = Sound.category
         #endif
-        let playersPerSound = max(Sound.playersPerSound, 1)
+        let playersPerSound = max(numberOfPlayers ?? Sound.playersPerSound, 1)
         var myPlayers: [Player] = []
         myPlayers.reserveCapacity(playersPerSound)
         for _ in 0..<playersPerSound {
@@ -222,10 +227,11 @@ open class Sound {
     ///   - file: Sound file name.
     ///   - fileExtension: Sound file extension.
     ///   - numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
+    ///   - numberOfPlayers: Number of AVAudioPlayer instances for sound.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
-    @discardableResult public static func play(file: String, fileExtension: String? = nil, numberOfLoops: Int = 0) -> Bool {
+    @discardableResult public static func play(file: String, fileExtension: String? = nil, numberOfLoops: Int = 0, numberOfPlayers: Int? = nil) -> Bool {
         if let url = url(for: file, fileExtension: fileExtension) {
-            return play(url: url, numberOfLoops: numberOfLoops)
+            return play(url: url, numberOfLoops: numberOfLoops, numberOfPlayers: numberOfPlayers)
         }
         return false
     }
@@ -235,14 +241,15 @@ open class Sound {
     /// - Parameters:
     ///   - url: Sound file URL.
     ///   - numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
+    ///   - numberOfPlayers: Number of AVAudioPlayer instances for sound.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
-    @discardableResult public static func play(url: URL, numberOfLoops: Int = 0) -> Bool {
+    @discardableResult public static func play(url: URL, numberOfLoops: Int = 0, numberOfPlayers: Int? = nil) -> Bool {
         if !Sound.enabled {
             return false
         }
         var sound = sounds[url]
         if sound == nil {
-            sound = Sound(url: url)
+            sound = Sound(url: url, numberOfPlayers: numberOfPlayers)
             sounds[url] = sound
         }
         return sound?.play(numberOfLoops: numberOfLoops) ?? false

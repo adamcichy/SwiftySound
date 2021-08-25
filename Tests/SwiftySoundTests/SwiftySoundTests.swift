@@ -109,6 +109,18 @@ class SwiftySoundTests: XCTestCase {
         XCTAssertEqual(Sound.playersPerSound, 5)
     }
 
+    func testPlayersPerSpecificSound() {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav") {
+
+            guard let sound = Sound(url: url, numberOfPlayers: 3) else {
+                XCTFail()
+                return
+            }
+
+            XCTAssertEqual(sound.playersPerSound, 3)
+        }
+    }
+
     // MARK: Playback
     func testCreatingInstance() {
         if let url = bundle.url(forResource: "dog", withExtension: "wav") {
