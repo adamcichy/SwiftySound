@@ -263,6 +263,11 @@ open class Sound {
         }
     }
 
+    public var currentTime: TimeInterval {
+        get { players[counter].currentTime }
+        set { players[counter].currentTime = newValue }
+    }
+
     /// Sound volume.
     /// A value in the range 0.0 to 1.0, with 0.0 representing the minimum volume and 1.0 representing the maximum volume.
     public var volume: Float {
@@ -327,6 +332,10 @@ public protocol Player: AnyObject {
     ///
     /// - Parameter url: sound url.
     init(contentsOf url: URL) throws
+
+    ///  - If the sound **is** playing, currentTime is the offset into the sound of the current playback position.
+    ///  - If the sound **is not** playing, currentTime is the offset into the sound where playing would start.
+    var currentTime: TimeInterval { get set }
 
     /// Duration of the sound.
     var duration: TimeInterval { get }
