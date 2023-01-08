@@ -301,7 +301,7 @@ open class Sound {
 }
 
 /// Player protocol. It duplicates `AVAudioPlayer` methods.
-public protocol Player: class {
+public protocol Player: AnyObject {
 
     /// Play the sound.
     ///
