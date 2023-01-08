@@ -223,9 +223,9 @@ open class Sound {
     ///   - fileExtension: Sound file extension.
     ///   - numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
-    @discardableResult public static func play(file: String, fileExtension: String? = nil, numberOfLoops: Int = 0) -> Bool {
+    @discardableResult public static func play(file: String, fileExtension: String? = nil, numberOfLoops: Int = 0, volume: Float = 1.0) -> Bool {
         if let url = url(for: file, fileExtension: fileExtension) {
-            return play(url: url, numberOfLoops: numberOfLoops)
+            return play(url: url, numberOfLoops: numberOfLoops, volume: volume)
         }
         return false
     }
@@ -236,13 +236,14 @@ open class Sound {
     ///   - url: Sound file URL.
     ///   - numberOfLoops: Number of loops. Specify a negative number for an infinite loop. Default value of 0 means that the sound will be played once.
     /// - Returns: If the sound was played successfully the return value will be true. It will be false if sounds are disabled or if system could not play the sound.
-    @discardableResult public static func play(url: URL, numberOfLoops: Int = 0) -> Bool {
+    @discardableResult public static func play(url: URL, numberOfLoops: Int = 0, volume: Float = 1.0) -> Bool {
         if !Sound.enabled {
             return false
         }
         var sound = sounds[url]
         if sound == nil {
             sound = Sound(url: url)
+            sound?.volume = volume
             sounds[url] = sound
         }
         return sound?.play(numberOfLoops: numberOfLoops) ?? false
