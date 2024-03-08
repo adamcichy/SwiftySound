@@ -1,0 +1,15 @@
+{
+  "originHash" : "8e30abd2961d5a5ea9d990ec6ea53a6ebeb5dad5665cfafd708c10f431cf2960",
+  "pins" : [
+    {
+      "identity" : "swiftysound",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adamcichy/SwiftySound.git",
+      "state" : {
+        "revision" : "ae69bc63b12a431e75963381ef8f926c4c8b7993",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

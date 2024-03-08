@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,12 +14,11 @@
 		6619340A1E5CD8DE0042D25E /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661934091E5CD8DE0042D25E /* dog.wav */; };
 		6619340C1E5CD8E50042D25E /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6619340B1E5CD8E50042D25E /* cat.wav */; };
 		6635A3471E8E7E0400A3E02B /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6635A3431E8E7BF800A3E02B /* empty.wav */; };
+		66AFCD012B9BC6E600A5126C /* SwiftySound in Frameworks */ = {isa = PBXBuildFile; productRef = 66AFCD002B9BC6E600A5126C /* SwiftySound */; };
 		66DB6F35205ED17300A48129 /* piano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 66DB6F34205ED17300A48129 /* piano.wav */; };
-		9D41A1ED62D3AAA1DC8029E9 /* Pods_SwiftySoundExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9083389E2A2BA2AC108FC7FF /* Pods_SwiftySoundExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6072F6F0D9EF16184283DD27 /* Pods-SwiftySoundExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.debug.xcconfig"; sourceTree = "<group>"; };
 		661933F31E5CD6A50042D25E /* SwiftySoundExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySoundExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661933F61E5CD6A50042D25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		661933F81E5CD6A50042D25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +29,6 @@
 		6619340B1E5CD8E50042D25E /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
 		6635A3431E8E7BF800A3E02B /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
 		66DB6F34205ED17300A48129 /* piano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = piano.wav; sourceTree = "<group>"; };
-		9083389E2A2BA2AC108FC7FF /* Pods_SwiftySoundExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySoundExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F16796BA56A5073D7DBC0606 /* Pods-SwiftySoundExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySoundExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,37 +36,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D41A1ED62D3AAA1DC8029E9 /* Pods_SwiftySoundExample.framework in Frameworks */,
+				66AFCD012B9BC6E600A5126C /* SwiftySound in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4220A86574790A55724CCE85 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9083389E2A2BA2AC108FC7FF /* Pods_SwiftySoundExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		562C48185CC79B5647AF7540 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6072F6F0D9EF16184283DD27 /* Pods-SwiftySoundExample.debug.xcconfig */,
-				F16796BA56A5073D7DBC0606 /* Pods-SwiftySoundExample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		661933EA1E5CD6A50042D25E = {
 			isa = PBXGroup;
 			children = (
 				661933F51E5CD6A50042D25E /* SwiftySoundExample */,
 				661933F41E5CD6A50042D25E /* Products */,
-				562C48185CC79B5647AF7540 /* Pods */,
-				4220A86574790A55724CCE85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,18 +90,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 661934051E5CD6A50042D25E /* Build configuration list for PBXNativeTarget "SwiftySoundExample" */;
 			buildPhases = (
-				EF2CAA06ACE49C269D32E89A /* [CP] Check Pods Manifest.lock */,
 				661933EF1E5CD6A50042D25E /* Sources */,
 				661933F01E5CD6A50042D25E /* Frameworks */,
 				661933F11E5CD6A50042D25E /* Resources */,
-				9448886DF868C0AFE4BBC8BA /* [CP] Embed Pods Frameworks */,
-				DC2AE109D7377C9E938BEEB1 /* Tailor */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftySoundExample;
+			packageProductDependencies = (
+				66AFCD002B9BC6E600A5126C /* SwiftySound */,
+			);
 			productName = SwiftySoundExample;
 			productReference = 661933F31E5CD6A50042D25E /* SwiftySoundExample.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 661933EA1E5CD6A50042D25E;
+			packageReferences = (
+				66AFCCFF2B9BC6E600A5126C /* XCRemoteSwiftPackageReference "SwiftySound" */,
+			);
 			productRefGroup = 661933F41E5CD6A50042D25E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,58 +158,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9448886DF868C0AFE4BBC8BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftySoundExample/Pods-SwiftySoundExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC2AE109D7377C9E938BEEB1 /* Tailor */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Tailor;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if hash tailor 2>/dev/null; then\n  tailor ..\nfi\n";
-		};
-		EF2CAA06ACE49C269D32E89A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftySoundExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		661933EF1E5CD6A50042D25E /* Sources */ = {
@@ -304,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -357,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -368,7 +297,6 @@
 		};
 		661934061E5CD6A50042D25E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6072F6F0D9EF16184283DD27 /* Pods-SwiftySoundExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -385,7 +313,6 @@
 		};
 		661934071E5CD6A50042D25E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F16796BA56A5073D7DBC0606 /* Pods-SwiftySoundExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -422,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66AFCCFF2B9BC6E600A5126C /* XCRemoteSwiftPackageReference "SwiftySound" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamcichy/SwiftySound.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66AFCD002B9BC6E600A5126C /* SwiftySound */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66AFCCFF2B9BC6E600A5126C /* XCRemoteSwiftPackageReference "SwiftySound" */;
+			productName = SwiftySound;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 661933EB1E5CD6A50042D25E /* Project object */;
 }
