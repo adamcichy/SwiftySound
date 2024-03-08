@@ -1,5 +1,5 @@
-import XCTest
 @testable import SwiftySoundTests
+import XCTest
 
 XCTMain([
     testCase(SwiftySoundTests.allTests),

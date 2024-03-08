@@ -7,12 +7,14 @@ let package = Package(
     products: [
         .library(
             name: "SwiftySound",
-            targets: ["SwiftySound"])
+            targets: ["SwiftySound"]
+        ),
     ],
     targets: [
         .target(
             name: "SwiftySound",
-            path: "Sources")
+            path: "Sources"
+        ),
     ],
     swiftLanguageVersions: [.v5]
 )

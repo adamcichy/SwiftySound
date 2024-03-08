@@ -6,20 +6,19 @@
 //  Copyright © 2017 Adam CIchy. All rights reserved.
 //
 
-import UIKit
 import SwiftySound
+import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var switchSoundEnabled: UISwitch!
-    @IBOutlet weak var switchBackgroundMusic: UISwitch!
-    @IBOutlet weak var textFieldNumberOfLoops: UITextField!
-    @IBOutlet weak var buttonDog: UIButton!
-    @IBOutlet weak var buttonCat: UIButton!
-    @IBOutlet weak var buttonStop: UIButton!
-    @IBOutlet weak var labelVolume: UILabel!
-    @IBOutlet weak var sliderVolume: UISlider!
-    @IBOutlet weak var buttonDogWithVolume: UIButton!
+    @IBOutlet var switchSoundEnabled: UISwitch!
+    @IBOutlet var switchBackgroundMusic: UISwitch!
+    @IBOutlet var textFieldNumberOfLoops: UITextField!
+    @IBOutlet var buttonDog: UIButton!
+    @IBOutlet var buttonCat: UIButton!
+    @IBOutlet var buttonStop: UIButton!
+    @IBOutlet var labelVolume: UILabel!
+    @IBOutlet var sliderVolume: UISlider!
+    @IBOutlet var buttonDogWithVolume: UIButton!
 
     private var backgroundSound: Sound?
     private var dogSound: Sound?
@@ -45,21 +44,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Actions
-    @IBAction func buttonDogClicked(_ sender: Any) {
+
+    @IBAction func buttonDogClicked(_: Any) {
         Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: numberOfLoops())
     }
 
-    @IBAction func buttonCatClicked(_ sender: Any) {
+    @IBAction func buttonCatClicked(_: Any) {
         Sound.play(file: "cat", fileExtension: "wav", numberOfLoops: numberOfLoops())
     }
 
-    @IBAction func buttonDogWithVolumeClicked(_ sender: Any) {
+    @IBAction func buttonDogWithVolumeClicked(_: Any) {
         dogSound?.play { completed in
             print("completed: \(completed)")
         }
     }
 
-    @IBAction func buttonStopClicked(_ sender: Any) {
+    @IBAction func buttonStopClicked(_: Any) {
         Sound.stopAll()
         switchBackgroundMusic.isOn = false
     }
@@ -74,18 +74,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func switchBackgroundMusicValueChanged(_ sender: UISwitch) {
         if sender.isOn {
             enableBackgroundMusic()
-        }
-        else {
+        } else {
             disableBackgroundMusic()
         }
     }
 
     @IBAction func sliderVolumeValueChanged(_ sender: UISlider) {
         dogSound?.volume = sender.value
-        labelVolume.text = "volume: \(String(format: "%0.0f", (sender.value * 100)))%"
+        labelVolume.text = "volume: \(String(format: "%0.0f", sender.value * 100))%"
     }
 
     // MARK: - Background music
+
     private func enableBackgroundMusic() {
         guard let backgroundSound = backgroundSound else { return }
         if !backgroundSound.resume() { // trying to resume
@@ -98,9 +98,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - UITextFieldDelegate
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(false)
         return true
     }
-
 }

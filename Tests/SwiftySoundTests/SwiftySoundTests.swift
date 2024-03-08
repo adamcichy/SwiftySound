@@ -7,13 +7,12 @@
 //
 
 import Foundation
-import XCTest
 import SwiftySound
+import XCTest
 
 extension String: Error {}
 
 final class MockPlayer: Player {
-
     var duration: TimeInterval = 1
     var volume: Float = 1
     var isPlaying: Bool = false
@@ -27,7 +26,7 @@ final class MockPlayer: Player {
         }
     }
 
-    func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
+    func play(numberOfLoops _: Int, completion: PlayerCompletion?) -> Bool {
         isPlaying = true
         completion?(true)
         return true
@@ -48,11 +47,9 @@ final class MockPlayer: Player {
     func resume() {
         isPlaying = true
     }
-
 }
 
 class SwiftySoundTests: XCTestCase {
-
     var catSound: Sound!
     var dogSound: Sound!
 
@@ -73,25 +70,26 @@ class SwiftySoundTests: XCTestCase {
     }
 
     // MARK: Properties
+
     #if os(iOS) || os(tvOS)
 
-    func testDefaultSoundCategory() {
-        let defaultCategory = Sound.category
-        XCTAssertEqual(defaultCategory, .ambient)
-    }
+        func testDefaultSoundCategory() {
+            let defaultCategory = Sound.category
+            XCTAssertEqual(defaultCategory, .ambient)
+        }
 
-    func testCategoryChange() {
-        Sound.category = SoundCategory.playAndRecord
-        XCTAssertEqual(Sound.category, .playAndRecord)
-        Sound.category = SoundCategory.record
-        XCTAssertEqual(Sound.category, .record)
-        Sound.category = SoundCategory.playback
-        XCTAssertEqual(Sound.category, .playback)
-        Sound.category = SoundCategory.soloAmbient
-        XCTAssertEqual(Sound.category, .soloAmbient)
-        Sound.category = SoundCategory.ambient
-        XCTAssertEqual(Sound.category, .ambient)
-    }
+        func testCategoryChange() {
+            Sound.category = SoundCategory.playAndRecord
+            XCTAssertEqual(Sound.category, .playAndRecord)
+            Sound.category = SoundCategory.record
+            XCTAssertEqual(Sound.category, .record)
+            Sound.category = SoundCategory.playback
+            XCTAssertEqual(Sound.category, .playback)
+            Sound.category = SoundCategory.soloAmbient
+            XCTAssertEqual(Sound.category, .soloAmbient)
+            Sound.category = SoundCategory.ambient
+            XCTAssertEqual(Sound.category, .ambient)
+        }
 
     #endif
 
@@ -110,6 +108,7 @@ class SwiftySoundTests: XCTestCase {
     }
 
     // MARK: Playback
+
     func testCreatingInstance() {
         if let url = bundle.url(forResource: "dog", withExtension: "wav") {
             let sound = Sound(url: url)
@@ -226,5 +225,4 @@ class SwiftySoundTests: XCTestCase {
         dogSound.pause()
         XCTAssert(dogSound.resume())
     }
-
 }
