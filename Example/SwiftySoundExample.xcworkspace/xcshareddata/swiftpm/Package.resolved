@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adamcichy/SwiftySound.git",
       "state" : {
-        "revision" : "ae69bc63b12a431e75963381ef8f926c4c8b7993",
-        "version" : "1.2.0"
+        "branch" : "master",
+        "revision" : "de233cc96b0154cb26c66b9a0f1c2719709c83ac"
       }
     }
   ],
