@@ -109,7 +109,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZZ-PG-j9T">
-                                <rect key="frame" x="103" y="239" width="32" height="35"/>
+                                <rect key="frame" x="97" y="239" width="32" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="-"/>
                                 <connections>
@@ -128,14 +128,14 @@
                         <viewLayoutGuide key="safeArea" id="9zR-aj-slH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L4Y-9i-JdE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svs-i9-dp5" secondAttribute="trailing" symbolic="YES" id="0Se-u4-DUx"/>
+                            <constraint firstItem="L4Y-9i-JdE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svs-i9-dp5" secondAttribute="trailing" constant="8" symbolic="YES" id="0Se-u4-DUx"/>
                             <constraint firstItem="svs-i9-dp5" firstAttribute="top" secondItem="p3T-Pr-V5g" secondAttribute="bottom" constant="17" id="1u6-ba-uKO"/>
                             <constraint firstItem="p3T-Pr-V5g" firstAttribute="top" secondItem="xfo-vL-Vf4" secondAttribute="bottom" constant="68" id="4QB-ta-hYV"/>
                             <constraint firstItem="9zR-aj-slH" firstAttribute="trailing" secondItem="Ddk-aC-UUK" secondAttribute="trailing" constant="16" id="6ON-9X-zVx"/>
                             <constraint firstItem="Cat-pQ-dau" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0cg-Hi-D2e" secondAttribute="bottom" constant="8" symbolic="YES" id="80V-L4-Xn7"/>
                             <constraint firstItem="0cg-Hi-D2e" firstAttribute="leading" secondItem="9zR-aj-slH" secondAttribute="leading" constant="60" id="81Z-Rz-wOn"/>
                             <constraint firstItem="MJa-49-ADP" firstAttribute="top" secondItem="svs-i9-dp5" secondAttribute="bottom" constant="14" id="9ii-dK-Xq3"/>
-                            <constraint firstItem="svs-i9-dp5" firstAttribute="leading" secondItem="KZZ-PG-j9T" secondAttribute="trailing" constant="2" id="9pd-l3-heL"/>
+                            <constraint firstItem="svs-i9-dp5" firstAttribute="leading" secondItem="KZZ-PG-j9T" secondAttribute="trailing" constant="8" symbolic="YES" id="9pd-l3-heL"/>
                             <constraint firstItem="SJz-lZ-q5h" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Cat-pQ-dau" secondAttribute="bottom" constant="8" symbolic="YES" id="DI5-qp-afv"/>
                             <constraint firstItem="0cg-Hi-D2e" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MJa-49-ADP" secondAttribute="bottom" constant="8" symbolic="YES" id="DIP-xC-bSc"/>
                             <constraint firstItem="svs-i9-dp5" firstAttribute="leading" secondItem="9zR-aj-slH" secondAttribute="leading" constant="137" id="DcV-GE-qKJ"/>
