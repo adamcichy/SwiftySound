@@ -44,6 +44,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Actions
+    
+    @IBAction func buttonMinusClicked(_: Any) {
+        if let numberOfLoopsString = textFieldNumberOfLoops.text,
+           let numberOfLoops = Int(numberOfLoopsString) {
+            textFieldNumberOfLoops.text = String(numberOfLoops - 1)
+        } else {
+            textFieldNumberOfLoops.text = "0"
+        }
+    }
+
+    @IBAction func buttonPlusClicked(_: Any) {
+        if let numberOfLoopsString = textFieldNumberOfLoops.text,
+           let numberOfLoops = Int(numberOfLoopsString) {
+            textFieldNumberOfLoops.text = String(numberOfLoops + 1)
+        } else {
+            textFieldNumberOfLoops.text = "1"
+        }
+    }
 
     @IBAction func buttonDogClicked(_: Any) {
         Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: numberOfLoops())
