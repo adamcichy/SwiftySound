@@ -5,10 +5,7 @@
 [![CocoaPods Platforms](https://img.shields.io/cocoapods/p/SwiftySound.svg)](https://cocoapods.org/pods/SwiftySound)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 [![SPM ready](https://img.shields.io/badge/SPM-ready-orange.svg)](https://swift.org/package-manager/)
-[![Build status](https://api.travis-ci.org/adamcichy/SwiftySound.svg?branch=master)](https://travis-ci.org/adamcichy/SwiftySound)
-[![codecov](https://codecov.io/gh/adamcichy/SwiftySound/branch/master/graph/badge.svg)](https://codecov.io/gh/adamcichy/SwiftySound)
 [![codebeat](https://codebeat.co/badges/b51bedad-3c13-4ef2-a632-5c4e3d4fa759)](https://codebeat.co/projects/github-com-adamcichy-swiftysound-master)
-[![Codacy](https://api.codacy.com/project/badge/Grade/048aad599e8549fa9f5d433f690dd796)](https://www.codacy.com/app/adamcichy/SwiftySound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=adamcichy/SwiftySound&amp;utm_campaign=Badge_Grade)
 
 ## Overview
 SwiftySound is a simple library that lets you deal with Swift sounds easily.
@@ -105,13 +102,14 @@ The callback is not called if the sound was stopped, interrupted or in case of a
 
 ## Requirements
 - Swift 5
-- Xcode 10.2 or later
-- iOS 8.0 or later
-- tvOS 9.0 or later
-- macOS 10.9 or later
+- Xcode 15 or later
+- iOS 12.0 or later
+- tvOS 12.0 or later
+- macOS 10.13 or later
 
 For Xcode 8 and Swift 3 support, please use SwiftySound version `0.7.0`.
 For Xcode 9 and Swift 4 support, please use SwiftySound version `1.0.0`.
+For Xcode 10 and iOS 9 support, please use SwiftySound version `1.2.0`.
 
 ## Installation
 ### Installation with CocoaPods
@@ -120,7 +118,7 @@ For Xcode 9 and Swift 4 support, please use SwiftySound version `1.0.0`.
 
 #### Podfile
 ```ruby
-platform :ios, '8.0'
+platform :ios, '12.0'
 use_frameworks!
 pod 'SwiftySound'
 ```
