@@ -44,10 +44,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Actions
-    
+
     @IBAction func buttonMinusClicked(_: Any) {
         if let numberOfLoopsString = textFieldNumberOfLoops.text,
-           let numberOfLoops = Int(numberOfLoopsString) {
+           let numberOfLoops = Int(numberOfLoopsString)
+        {
             textFieldNumberOfLoops.text = String(numberOfLoops - 1)
         } else {
             textFieldNumberOfLoops.text = "0"
@@ -56,7 +57,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func buttonPlusClicked(_: Any) {
         if let numberOfLoopsString = textFieldNumberOfLoops.text,
-           let numberOfLoops = Int(numberOfLoopsString) {
+           let numberOfLoops = Int(numberOfLoopsString)
+        {
             textFieldNumberOfLoops.text = String(numberOfLoops + 1)
         } else {
             textFieldNumberOfLoops.text = "1"
