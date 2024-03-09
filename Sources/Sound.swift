@@ -335,7 +335,9 @@ public typealias PlayerCompletion = (Bool) -> Void
 extension AVAudioPlayer: Player, AVAudioPlayerDelegate {
     public func play(numberOfLoops: Int, completion: PlayerCompletion?) -> Bool {
         if let cmpl = completion {
-            objc_setAssociatedObject(self, &associatedCallbackKey, cmpl, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            withUnsafePointer(to: associatedCallbackKey) {
+                objc_setAssociatedObject(self, $0, cmpl, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            }
             delegate = self
         }
         self.numberOfLoops = numberOfLoops
@@ -347,8 +349,10 @@ extension AVAudioPlayer: Player, AVAudioPlayerDelegate {
     }
 
     public func audioPlayerDidFinishPlaying(_: AVAudioPlayer, successfully flag: Bool) {
-        let cmpl = objc_getAssociatedObject(self, &associatedCallbackKey) as? PlayerCompletion
-        cmpl?(flag)
+        withUnsafePointer(to: associatedCallbackKey) {
+            let cmpl = objc_getAssociatedObject(self, $0) as? PlayerCompletion
+            cmpl?(flag)
+        }
         objc_removeAssociatedObjects(self)
         delegate = nil
     }
