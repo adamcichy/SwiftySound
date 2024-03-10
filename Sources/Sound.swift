@@ -248,6 +248,12 @@ open class Sound {
         let sound = sounds[url]
         sound?.stop()
     }
+    
+    /// Clear all cached sound -> close all opening audio file -> avoid Domain=NSOSStatusErrorDomain Code=-42 error.
+    public static func clearCache() {
+        stopAll()
+        sounds.removeAll()
+    }
 
     /// Duration of the sound.
     public var duration: TimeInterval {
