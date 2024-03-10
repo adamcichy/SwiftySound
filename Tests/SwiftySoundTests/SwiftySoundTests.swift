@@ -14,6 +14,7 @@ extension String: Error {}
 
 final class MockPlayer: Player {
     var duration: TimeInterval = 1
+    var currentTime: TimeInterval = 1
     var volume: Float = 1
     var isPlaying: Bool = false
 
@@ -179,10 +180,25 @@ class SwiftySoundTests: XCTestCase {
         }
     }
 
+    func testVolumeWithDuration() {
+        if let url = bundle.url(forResource: "dog", withExtension: "wav"), let sound = Sound(url: url) {
+            sound.setVolume(0.5, fadeDuration: 0)
+            XCTAssertEqual(sound.volume, 0.5)
+            sound.setVolume(0.0, fadeDuration: 0)
+            XCTAssertEqual(sound.volume, 0.0)
+            sound.setVolume(1.0, fadeDuration: 0)
+            XCTAssertEqual(sound.volume, 1.0)
+        }
+    }
+
     func testDuration() {
         XCTAssert(dogSound.duration > 0)
     }
 
+    func testCurrentTime() {
+        XCTAssert(dogSound.currentTime > 0)
+    }
+    
     func testNotEnabledPlayback() {
         Sound.enabled = false
         let result = dogSound.play()
